@@ -1,0 +1,97 @@
+Post-setup validation run: lun. 22 sept. 2025 18:44:10 CEST
+
+== Network Interfaces ==
+lo               UNKNOWN        00:00:00:00:00:00 <LOOPBACK,UP,LOWER_UP> 
+enp0s3           UP             08:00:27:e5:a2:d9 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+enp0s8           UP             08:00:27:29:f9:cf <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP> 
+lxdbr0           UP             00:16:3e:a2:2d:b6 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+veth0d581185@if5 UP             96:12:35:58:c9:d7 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+vethf8bf4d1b@if7 UP             f2:98:e7:26:04:cc <BROADCAST,MULTICAST,UP,LOWER_UP> 
+veth60062aa4@if9 UP             d2:e9:5e:23:0c:1b <BROADCAST,MULTICAST,UP,LOWER_UP> 
+veth8d5baa11@if11 UP             2e:98:68:28:90:b4 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+
+== Bridge Membership ==
+3: enp0s8: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP> mtu 1500 master lxdbr0 state forwarding priority 32 cost 5 
+6: veth0d581185@if5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master lxdbr0 state forwarding priority 32 cost 2 
+8: vethf8bf4d1b@if7: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master lxdbr0 state forwarding priority 32 cost 2 
+10: veth60062aa4@if9: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master lxdbr0 state forwarding priority 32 cost 2 
+12: veth8d5baa11@if11: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master lxdbr0 state forwarding priority 32 cost 2 
+
+== lxdbr0 Addresses ==
+4: lxdbr0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 00:16:3e:a2:2d:b6 brd ff:ff:ff:ff:ff:ff
+    inet 10.42.0.1/24 scope global lxdbr0
+       valid_lft forever preferred_lft forever
+
+== dnsmasq leases (sip-dhcp) ==
+1758601275 0e:7b:8a:49:f6:6b 10.42.0.55 * 01:0e:7b:8a:49:f6:6b
+1758587855 a6:5e:c2:d7:94:0a 10.42.0.51 * 01:a6:5e:c2:d7:94:0a
+1758600027 98:e8:fa:bb:4e:a9 10.42.0.66 * *
+1758588206 00:16:3e:21:fa:e9 10.42.0.62 ua01 ff:d7:5a:54:5e:00:02:00:00:ab:11:19:bd:50:e4:ba:45:dc:70
+1758588208 00:16:3e:42:61:6d 10.42.0.56 asterisk01 ff:a2:ec:58:a8:00:02:00:00:ab:11:8f:14:df:f1:6a:3a:cd:73
+1758588208 00:16:3e:97:14:8b 10.42.0.88 ua02 ff:db:45:94:59:00:02:00:00:ab:11:19:bd:50:e4:ba:45:dc:70
+
+== dnsmasq scope ==
+interface=eth0
+bind-interfaces
+bogus-priv
+quiet-dhcp
+quiet-dhcp6
+quiet-ra
+domain=sip.lab
+dhcp-range=10.42.0.50,10.42.0.99,255.255.255.0,12h
+dhcp-option=option:router,10.42.0.1
+dhcp-option=option:dns-server,10.42.0.2
+dhcp-option=option:domain-search,sip.lab
+server=1.1.1.1
+# dhcp-host=<MAC-thomson-st2030>,10.42.0.50  # Thomson ST2030
+# dhcp-host=<MAC-grandstream-b100-1>,10.42.0.51  # Grandstream Budgetone 100 A
+# dhcp-host=<MAC-grandstream-b100-2>,10.42.0.52  # Grandstream Budgetone 100 B
+# dhcp-host=<MAC-aastra-53i>,10.42.0.53  # Aastra 53i
+# dhcp-host=<MAC-aethra-maia-xc>,10.42.0.54  # Aethra Maia XC
+# dhcp-host=<MAC-pap2t-1>,10.42.0.55  # Linksys PAP-2T #1
+# dhcp-host=<MAC-pap2t-2>,10.42.0.56  # Linksys PAP-2T #2
+
+== Asterisk Peers ==
+Name/username             Host                                    Dyn Forcerport Comedia    ACL Port     Status      Description                      
+2001/2001                 (Unspecified)                            D  Yes        Yes            0        UNKNOWN                                      
+2002/2002                 (Unspecified)                            D  Yes        Yes            0        UNKNOWN                                      
+2003/2003                 (Unspecified)                            D  Yes        Yes            0        UNKNOWN                                      
+2004/2004                 (Unspecified)                            D  Yes        Yes            0        UNKNOWN                                      
+2005/2005                 (Unspecified)                            D  Yes        Yes            0        UNKNOWN                                      
+2006/2006                 (Unspecified)                            D  Yes        Yes            0        UNKNOWN                                      
+2007/2007                 (Unspecified)                            D  Yes        Yes            0        UNKNOWN                                      
+2008/2008                 (Unspecified)                            D  Yes        Yes            0        UNKNOWN                                      
+2009/2009                 (Unspecified)                            D  Yes        Yes            0        UNKNOWN                                      
+ua01                      (Unspecified)                            D  Auto (No)  No             0        UNKNOWN                                      
+10 sip peers [Monitored: 0 online, 10 offline Unmonitored: 0 online, 0 offline]
+
+== Asterisk Channels (snapshot) ==
+Channel              Context              Extension        Prio State   Application  Data                      CallerID        Duration Accountcode PeerAccount BridgeID            
+0 active channels
+0 active calls
+2 calls processed
+
+== Sample pjsua commands ==
+pjsua --id sip:2001@sip.lab --registrar sip:10.42.0.3 --realm '*'       --username 2001 --password 'm6IqgzJJBrfHVdvwKnfK' sip:2002@sip.lab
+
+pjsua --id sip:2002@sip.lab --registrar sip:10.42.0.3 --realm '*'       --username 2002 --password 'rCJ800xpFBe9N9uGyEai' sip:2001@sip.lab
+
+# These sample invocations register each UA against the Asterisk PBX (10.42.0.3)
+# from a remote host, then immediately place a call toward another extension.
+# Running them validates the exercise requirements: the distant UA authenticates,
+# signalling traverses the lxdbr0 bridge (with the USB NIC enslaved), and media
+# flows end-to-end between two SIP endpoints provisioned via the generated
+# accounts.
+
+== Provisioning Templates ==
+aastra-53i_2004.cfg
+aethra-maia-xc_2005.cfg
+grandstream-b100-1_2002.cfg
+grandstream-b100-2_2003.cfg
+pap2t-1_2006.cfg
+pap2t-1_2007.cfg
+pap2t-2_2008.cfg
+pap2t-2_2009.cfg
+thomson-st2030_2001.cfg
+

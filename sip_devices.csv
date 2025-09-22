@@ -1,0 +1,10 @@
+extension,label,secret,device,device_ip
+2001,Thomson ST2030,m6IqgzJJBrfHVdvwKnfK,Thomson ST2030,10.42.0.50
+2002,Grandstream Budgetone 100 A,rCJ800xpFBe9N9uGyEai,Grandstream Budgetone 100 A,10.42.0.51
+2003,Grandstream Budgetone 100 B,IKWmkeOOZbhiDKUTiAGv,Grandstream Budgetone 100 B,10.42.0.52
+2004,Aastra 53i,HxLqsRt19F69DxP9UETU,Aastra 53i,10.42.0.53
+2005,Aethra Maia XC,8DkK30JVJuVocQFK5N7A,Aethra Maia XC,10.42.0.54
+2006,PAP-2T #1 Line 1,0eQjc2ZyfvMdzsFQ3qjT,Linksys PAP-2T #1,10.42.0.55
+2007,PAP-2T #1 Line 2,zzrtkCmhqYrHAoM7XrPs,Linksys PAP-2T #1,10.42.0.55
+2008,PAP-2T #2 Line 1,LUNKvOl7JBW1kqKDN9P4,Linksys PAP-2T #2,10.42.0.56
+2009,PAP-2T #2 Line 2,JgH8IIDcB9nG1rS3MwM6,Linksys PAP-2T #2,10.42.0.56

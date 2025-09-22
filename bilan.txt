@@ -1,0 +1,2089 @@
+[full_validation] ===== ToIP Validation Report =====
+[full_validation] Date: lun. 22 sept. 2025 18:43:12 CEST
+[full_validation] Detected PBX IP 10.42.0.56 via container asterisk01
+[full_validation] Starting all simulated endpoints
+[full_validation] > sudo env ASTERISK_PBX_IP=10.42.0.56 ASTERISK_CONTAINER=asterisk01 ./simulate_softphones.sh start-all
+[2001] starting background pjsua (log: .pjsua_sessions/2001.log)
+[2002] starting background pjsua (log: .pjsua_sessions/2002.log)
+[2003] starting background pjsua (log: .pjsua_sessions/2003.log)
+[2004] starting background pjsua (log: .pjsua_sessions/2004.log)
+[2005] starting background pjsua (log: .pjsua_sessions/2005.log)
+[2006] starting background pjsua (log: .pjsua_sessions/2006.log)
+[2007] starting background pjsua (log: .pjsua_sessions/2007.log)
+[2008] starting background pjsua (log: .pjsua_sessions/2008.log)
+[2009] starting background pjsua (log: .pjsua_sessions/2009.log)
+[full_validation] Waiting for endpoint registrations (timeout 20s)
+[full_validation] > sudo env ASTERISK_PBX_IP=10.42.0.56 ASTERISK_CONTAINER=asterisk01 ./simulate_softphones.sh wait-registration 2001 20
+[2001] registration succeeded
+[full_validation] > sudo env ASTERISK_PBX_IP=10.42.0.56 ASTERISK_CONTAINER=asterisk01 ./simulate_softphones.sh wait-registration 2002 20
+[2002] registration succeeded
+[full_validation] > sudo env ASTERISK_PBX_IP=10.42.0.56 ASTERISK_CONTAINER=asterisk01 ./simulate_softphones.sh wait-registration 2003 20
+[2003] registration succeeded
+[full_validation] > sudo env ASTERISK_PBX_IP=10.42.0.56 ASTERISK_CONTAINER=asterisk01 ./simulate_softphones.sh wait-registration 2004 20
+[2004] registration succeeded
+[full_validation] > sudo env ASTERISK_PBX_IP=10.42.0.56 ASTERISK_CONTAINER=asterisk01 ./simulate_softphones.sh wait-registration 2005 20
+[2005] registration succeeded
+[full_validation] > sudo env ASTERISK_PBX_IP=10.42.0.56 ASTERISK_CONTAINER=asterisk01 ./simulate_softphones.sh wait-registration 2006 20
+[2006] registration succeeded
+[full_validation] > sudo env ASTERISK_PBX_IP=10.42.0.56 ASTERISK_CONTAINER=asterisk01 ./simulate_softphones.sh wait-registration 2007 20
+[2007] registration succeeded
+[full_validation] > sudo env ASTERISK_PBX_IP=10.42.0.56 ASTERISK_CONTAINER=asterisk01 ./simulate_softphones.sh wait-registration 2008 20
+[2008] registration succeeded
+[full_validation] > sudo env ASTERISK_PBX_IP=10.42.0.56 ASTERISK_CONTAINER=asterisk01 ./simulate_softphones.sh wait-registration 2009 20
+[2009] registration succeeded
+[full_validation] Calling 2002 from 2001 for 30s
+[full_validation] > sudo env ASTERISK_PBX_IP=10.42.0.56 ASTERISK_CONTAINER=asterisk01 ./simulate_softphones.sh call 2001 2002 30
+Dialing 2002 from 2001 (duration 30s)
+18:43:34.569         sip_endpoint.c !.Module "mod-pjsua-log" registered
+18:43:34.569         sip_endpoint.c  .Module "mod-tsx-layer" registered
+18:43:34.569         sip_endpoint.c  .Module "mod-stateful-util" registered
+18:43:34.569         sip_endpoint.c  .Module "mod-ua" registered
+18:43:34.569         sip_endpoint.c  .Module "mod-100rel" registered
+18:43:34.569         sip_endpoint.c  .Module "mod-pjsua" registered
+18:43:34.569         sip_endpoint.c  .Module "mod-invite" registered
+18:43:34.639             alsa_dev.c  ..ALSA driver found 19 devices
+18:43:34.639             alsa_dev.c  ..ALSA initialized
+18:43:34.639                  pjlib  ..select() I/O Queue created (0x5b4c632e3728)
+18:43:34.643         sip_endpoint.c  .Module "mod-evsub" registered
+18:43:34.643         sip_endpoint.c  .Module "mod-presence" registered
+18:43:34.644         sip_endpoint.c  .Module "mod-mwi" registered
+18:43:34.644         sip_endpoint.c  .Module "mod-refer" registered
+18:43:34.644         sip_endpoint.c  .Module "mod-pjsua-pres" registered
+18:43:34.644         sip_endpoint.c  .Module "mod-pjsua-im" registered
+18:43:34.644         sip_endpoint.c  .Module "mod-pjsua-options" registered
+18:43:34.644           pjsua_core.c  .1 SIP worker threads created
+18:43:34.644           pjsua_core.c  .pjsua version 2.14.1 for Linux-6.14.0.29/x86_64/glibc-2.39 initialized
+18:43:34.644           pjsua_core.c  .PJSUA state changed: CREATED --> INIT
+18:43:34.644         sip_endpoint.c  Module "mod-default-handler" registered
+18:43:34.644           pjsua_core.c  SIP UDP socket reachable at 10.0.2.15:7001
+18:43:34.644      udp0x5b4c63296630  SIP UDP transport started, published address is 10.0.2.15:7001
+18:43:34.644            pjsua_acc.c  Adding account: id=<sip:10.0.2.15:7001>
+18:43:34.644            pjsua_acc.c  .Account <sip:10.0.2.15:7001> added with id 0
+18:43:34.644            pjsua_acc.c  Modifying account 0
+18:43:34.644            pjsua_acc.c  Acc 0: setting online status to 1..
+18:43:34.644             tcptp:7001  SIP TCP listener ready for incoming connections at 10.0.2.15:7001
+18:43:34.644            pjsua_acc.c  Adding account: id=<sip:10.0.2.15:7001;transport=TCP>
+18:43:34.644            pjsua_acc.c  .Account <sip:10.0.2.15:7001;transport=TCP> added with id 1
+18:43:34.644            pjsua_acc.c  Modifying account 1
+18:43:34.644            pjsua_acc.c  Acc 1: setting online status to 1..
+18:43:34.644            pjsua_acc.c  Adding account: id=sip:2001@10.42.0.56
+18:43:34.644            pjsua_acc.c  .Account sip:2001@10.42.0.56 added with id 2
+18:43:34.644            pjsua_acc.c  .Acc 2: setting registration..
+18:43:34.644           pjsua_core.c  ...TX 531 bytes Request msg REGISTER/cseq=32306 (tdta0x5b4c6331e818) to UDP 10.42.0.56:5060:
+REGISTER sip:10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7001;rport;branch=z9hG4bKPjtzD0pq2nyOGaOA-uLAkEKnMoazsqBle2
+Max-Forwards: 70
+From: <sip:2001@10.42.0.56>;tag=.5fFtTLpjEayTuwCUrDecceaQ8xLyrMm
+To: <sip:2001@10.42.0.56>
+Call-ID: s6akwk66LQOwAxL11Bmg6bPhljqrTJYe
+CSeq: 32306 REGISTER
+User-Agent: PJSUA v2.14.1 Linux-6.14.0.29/x86_64/glibc-2.39
+Contact: <sip:2001@10.42.0.1:7001;ob>
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Content-Length:  0
+
+
+--end msg--
+18:43:34.644            pjsua_acc.c  ..Acc 2: Registration sent
+18:43:34.644            pjsua_acc.c  Acc 2: setting online status to 1..
+18:43:34.644           pjsua_pres.c  Adding buddy: sip:2002@10.42.0.56
+18:43:34.644           pjsua_pres.c  .Buddy 0 added.
+18:43:34.644           pjsua_pres.c  ..Buddy 0: updating presence..
+18:43:34.644            pjsua_aud.c  Setting null sound device..
+18:43:34.644            pjsua_app.c  .Turning sound device -99 -99 ON
+18:43:34.644            pjsua_aud.c  .Opening null sound device..
+18:43:34.645           pjsua_core.c  PJSUA state changed: INIT --> STARTING
+18:43:34.645         sip_endpoint.c  .Module "mod-unsolicited-mwi" registered
+18:43:34.645           pjsua_core.c  .PJSUA state changed: STARTING --> RUNNING
+18:43:34.645                 main.c  Ready: Success
+18:43:34.645           pjsua_call.c  Making call with acc #2 to sip:2002@10.42.0.56
+18:43:34.645          pjsua_media.c  .Call 0: initializing media..
+18:43:34.645          pjsua_media.c  ..RTP socket reachable at 10.0.2.15:4000
+18:43:34.645          pjsua_media.c  ..RTCP socket reachable at 10.0.2.15:4001
+18:43:34.645     srtp0x5b4c63280700  ..SRTP transport created
+18:43:34.645          pjsua_media.c  ..Media index 0 selected for audio call 0
+18:43:34.645      udp0x5b4c63325a30  ..UDP media transport created
+18:43:34.645           pjsua_core.c  ....TX 1250 bytes Request msg INVITE/cseq=27972 (tdta0x5b4c6332e788) to UDP 10.42.0.56:5060:
+INVITE sip:2002@10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7001;rport;branch=z9hG4bKPj2K8ETLSe23DnU4MCM1D4SyQ9oxKmIrJc
+Max-Forwards: 70
+From: sip:2001@10.42.0.56;tag=ZAdw8SqKRNcvpf8h2jc2JLKvd-Azz3Nb
+To: sip:2002@10.42.0.56
+Contact: <sip:2001@10.42.0.1:7001;ob>
+Call-ID: u9Pdjp9Ucqbe.qYeScqz6hvJlRvGL6h1
+CSeq: 27972 INVITE
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Supported: replaces, 100rel, timer, norefersub
+Session-Expires: 1800
+Min-SE: 90
+User-Agent: PJSUA v2.14.1 Linux-6.14.0.29/x86_64/glibc-2.39
+Content-Type: application/sdp
+Content-Length:   619
+
+v=0
+o=- 3967548214 3967548214 IN IP4 10.0.2.15
+s=pjmedia
+b=AS:84
+t=0 0
+a=X-nat:0
+m=audio 4000 RTP/AVP 96 97 98 99 3 0 8 9 120 121 122
+c=IN IP4 10.0.2.15
+b=TIAS:64000
+a=rtcp:4001 IN IP4 10.0.2.15
+a=sendrecv
+a=rtpmap:96 speex/16000
+a=rtpmap:97 speex/8000
+a=rtpmap:98 speex/32000
+a=rtpmap:99 iLBC/8000
+a=fmtp:99 mode=30
+a=rtpmap:3 GSM/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:9 G722/8000
+a=rtpmap:120 telephone-event/16000
+a=fmtp:120 0-16
+a=rtpmap:121 telephone-event/8000
+a=fmtp:121 0-16
+a=rtpmap:122 telephone-event/32000
+a=fmtp:122 0-16
+a=ssrc:148940435 cname:0d9983142a7bd71f
+
+--end msg--
+18:43:34.645            pjsua_app.c  .......Call 0 state changed to CALLING
+>>>>
+Account list:
+  [ 0] <sip:10.0.2.15:7001>: does not register
+       Online status: Online
+  [ 1] <sip:10.0.2.15:7001;transport=TCP>: does not register
+       Online status: Online
+ *[ 2] sip:2001@10.42.0.56: 100/In Progress (expires=0)
+       Online status: Online
+Buddy list:
+ [ 1] <?>  sip:2002@10.42.0.56
+
++=============================================================================+
+|       Call Commands:         |   Buddy, IM & Presence:  |     Account:      |
+|                              |                          |                   |
+|  m  Make new call            | +b  Add new buddy        | +a  Add new accnt.|
+|  M  Make multiple calls      | -b  Delete buddy         | -a  Delete accnt. |
+|  a  Answer call              |  i  Send IM              | !a  Modify accnt. |
+|  h  Hangup call  (ha=all)    |  s  Subscribe presence   | rr  (Re-)register |
+|  H  Hold call                |  u  Unsubscribe presence | ru  Unregister    |
+|  v  re-inVite (release hold) |  t  Toggle online status |  >  Cycle next ac.|
+|  U  send UPDATE              |  T  Set online status    |  <  Cycle prev ac.|
+| ],[ Select next/prev call    +--------------------------+-------------------+
+|  x  Xfer call                |      Media Commands:     |  Status & Config: |
+|  X  Xfer with Replaces       |                          |                   |
+|  #  Send RFC 2833 DTMF       | cl  List ports           |  d  Dump status   |
+|  *  Send DTMF with INFO      | cc  Connect port         | dd  Dump detailed |
+| dq  Dump curr. call quality  | cd  Disconnect port      | dc  Dump config   |
+|                              |  V  Adjust audio Volume  |  f  Save config   |
+|  S  Send arbitrary REQUEST   | Cp  Codec priorities     |                   |
++-----------------------------------------------------------------------------+
+|  q  QUIT      L  ReLoad       I  IP change     n  detect NAT type           |
+|  sleep MS     echo [0|1|txt]                                                |
++=============================================================================+
+You have 1 active call
+Current call id=0 to sip:2002@10.42.0.56 [CALLING]
+>>> Cannot switch back to console from file redirection
+18:43:34.645           pjsua_core.c  Shutting down, flags=0...
+18:43:34.645           pjsua_core.c  PJSUA state changed: RUNNING --> CLOSING
+18:43:34.658           pjsua_call.c  .Hangup all calls..
+18:43:34.658           pjsua_call.c  ..Call 0 hanging up: code=0..
+18:43:34.658          pjsua_media.c  ...Call 0: deinitializing media..
+18:43:34.658          pjsua_media.c  ....
+  [CALLING] To: sip:2002@10.42.0.56
+    Call time: 00h:00m:00s, 1st res in 13 ms, conn in 0ms
+18:43:34.658          pjsua_media.c  ....Call 0: cleaning up provisional media, prov_med_cnt=1, med_cnt=0
+18:43:34.658     srtp0x5b4c63280700  ....Destroying SRTP transport
+18:43:34.658      udp0x5b4c63325a30  ....UDP media transport destroyed
+18:43:34.658     srtp0x5b4c63280700  ....SRTP transport destroyed
+18:43:34.658            pjsua_app.c  ...Call 0 is DISCONNECTED [reason=487 (Request Terminated)]
+18:43:34.658      inv0x5b4c633246a8  ....Delaying CANCEL since no provisional response is received yet
+18:43:34.658          pjsua_media.c  .Call 0: deinitializing media..
+18:43:34.658          pjsua_media.c  ..
+  [DISCONNECTED] To: sip:2002@10.42.0.56
+    Call time: 00h:00m:00s, 1st res in 13 ms, conn in 0ms
+18:43:34.658          pjsua_media.c  .Call 1: deinitializing media..
+18:43:34.658          pjsua_media.c  .Call 2: deinitializing media..
+18:43:34.658          pjsua_media.c  .Call 3: deinitializing media..
+18:43:34.658           pjsua_pres.c  .Shutting down presence..
+18:43:34.658            pjsua_acc.c  .Acc 2: setting unregistration..
+18:43:34.658              sip_reg.c  ..Unable to send request, regc has another transaction pending
+18:43:34.658            pjsua_acc.c  ..Unable to create/send REGISTER: Object is busy (PJSIP_EBUSY) [status=171001]
+18:43:34.658           pjsua_core.c  ..RX 553 bytes Response msg 401/REGISTER/cseq=32306 (rdata0x5b4c633199b8) from UDP 10.42.0.56:5060:
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 10.42.0.1:7001;rport=7001;received=10.42.0.1;branch=z9hG4bKPjtzD0pq2nyOGaOA-uLAkEKnMoazsqBle2
+Call-ID: s6akwk66LQOwAxL11Bmg6bPhljqrTJYe
+From: <sip:2001@10.42.0.56>;tag=.5fFtTLpjEayTuwCUrDecceaQ8xLyrMm
+To: <sip:2001@10.42.0.56>;tag=z9hG4bKPjtzD0pq2nyOGaOA-uLAkEKnMoazsqBle2
+CSeq: 32306 REGISTER
+WWW-Authenticate: Digest realm="asterisk",nonce="1758559414/a3dd7fa6ada49f789601e96dceec3f58",opaque="5db6327a33ebdd98",algorithm=md5,qop="auth"
+Server: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Length:  0
+
+
+--end msg--
+18:43:34.658      sip_auth_client.c  ....Digest algorithm is "md5"
+18:43:34.658           pjsua_core.c  .....TX 816 bytes Request msg REGISTER/cseq=32307 (tdta0x5b4c6331e818) to UDP 10.42.0.56:5060:
+REGISTER sip:10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7001;rport;branch=z9hG4bKPj14HxiNMBSXfTte3vL-hQCo99ehjVMJL.
+Max-Forwards: 70
+From: <sip:2001@10.42.0.56>;tag=.5fFtTLpjEayTuwCUrDecceaQ8xLyrMm
+To: <sip:2001@10.42.0.56>
+Call-ID: s6akwk66LQOwAxL11Bmg6bPhljqrTJYe
+CSeq: 32307 REGISTER
+User-Agent: PJSUA v2.14.1 Linux-6.14.0.29/x86_64/glibc-2.39
+Contact: <sip:2001@10.42.0.1:7001;ob>
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Authorization: Digest username="2001", realm="asterisk", nonce="1758559414/a3dd7fa6ada49f789601e96dceec3f58", uri="sip:10.42.0.56", response="23de16a7617afbe7e102ea672e903155", algorithm=md5, cnonce="qrHJR6MDPhqW7cxeZ4ScNId4bYgySchk", opaque="5db6327a33ebdd98", qop=auth, nc=00000001
+Content-Length:  0
+
+
+--end msg--
+18:43:34.658           pjsua_core.c  ..RX 551 bytes Response msg 401/INVITE/cseq=27972 (rdata0x5b4c633199b8) from UDP 10.42.0.56:5060:
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 10.42.0.1:7001;rport=7001;received=10.42.0.1;branch=z9hG4bKPj2K8ETLSe23DnU4MCM1D4SyQ9oxKmIrJc
+Call-ID: u9Pdjp9Ucqbe.qYeScqz6hvJlRvGL6h1
+From: <sip:2001@10.42.0.56>;tag=ZAdw8SqKRNcvpf8h2jc2JLKvd-Azz3Nb
+To: <sip:2002@10.42.0.56>;tag=z9hG4bKPj2K8ETLSe23DnU4MCM1D4SyQ9oxKmIrJc
+CSeq: 27972 INVITE
+WWW-Authenticate: Digest realm="asterisk",nonce="1758559414/a3dd7fa6ada49f789601e96dceec3f58",opaque="1d3bf2a07aae8876",algorithm=md5,qop="auth"
+Server: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Length:  0
+
+
+--end msg--
+18:43:34.658           pjsua_core.c  ...TX 356 bytes Request msg ACK/cseq=27972 (tdta0x5b4c63325ce8) to UDP 10.42.0.56:5060:
+ACK sip:2002@10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7001;rport;branch=z9hG4bKPj2K8ETLSe23DnU4MCM1D4SyQ9oxKmIrJc
+Max-Forwards: 70
+From: sip:2001@10.42.0.56;tag=ZAdw8SqKRNcvpf8h2jc2JLKvd-Azz3Nb
+To: sip:2002@10.42.0.56;tag=z9hG4bKPj2K8ETLSe23DnU4MCM1D4SyQ9oxKmIrJc
+Call-ID: u9Pdjp9Ucqbe.qYeScqz6hvJlRvGL6h1
+CSeq: 27972 ACK
+Content-Length:  0
+
+
+--end msg--
+18:43:34.660           pjsua_core.c  ..RX 601 bytes Response msg 200/REGISTER/cseq=32307 (rdata0x5b4c633322a8) from UDP 10.42.0.56:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.42.0.1:7001;rport=7001;received=10.42.0.1;branch=z9hG4bKPj14HxiNMBSXfTte3vL-hQCo99ehjVMJL.
+Call-ID: s6akwk66LQOwAxL11Bmg6bPhljqrTJYe
+From: <sip:2001@10.42.0.56>;tag=.5fFtTLpjEayTuwCUrDecceaQ8xLyrMm
+To: <sip:2001@10.42.0.56>;tag=z9hG4bKPj14HxiNMBSXfTte3vL-hQCo99ehjVMJL.
+CSeq: 32307 REGISTER
+Date: Mon, 22 Sep 2025 16:43:34 GMT
+Contact: <sip:2001@10.42.0.1:5060;ob>;expires=262
+Contact: <sip:2001@10.42.0.1:6001;ob>;expires=278
+Contact: <sip:2001@10.42.0.1:7001;ob>;expires=299
+Expires: 300
+Server: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Length:  0
+
+
+--end msg--
+18:43:34.660            pjsua_acc.c  .....SIP outbound status for acc 2 is not active
+18:43:34.660            pjsua_acc.c  .....sip:2001@10.42.0.56: registration success, status=200 (OK), will re-register in 299 seconds
+18:43:34.660            pjsua_acc.c  .....Keep-alive timer started for acc 2, destination:10.42.0.56:5060, interval:13s
+18:43:34.672           pjsua_core.c  ..RX 639 bytes Request msg NOTIFY/cseq=36097 (rdata0x5b4c633199b8) from UDP 10.42.0.56:5060:
+NOTIFY sip:2001@10.42.0.1:7001;ob SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.56:5060;rport;branch=z9hG4bKPjd934af7d-e048-4292-8439-3e2cee50627f
+From: <sip:2001@10.42.0.56>;tag=e921189e-5b84-4e6a-b6bb-d71163307069
+To: <sip:2001@10.42.0.1;ob>
+Contact: <sip:2001@10.42.0.56:5060>
+Call-ID: 5d4fbc36-2bd5-4d6c-a3e5-ddd6712f0bb0
+CSeq: 36097 NOTIFY
+Subscription-State: terminated
+Event: message-summary
+Allow-Events: presence, dialog, message-summary, refer
+Max-Forwards: 70
+User-Agent: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Type: application/simple-message-summary
+Content-Length:    48
+
+Messages-Waiting: no
+Voice-Message: 0/0 (0/0)
+
+--end msg--
+18:43:34.672           pjsua_pres.c  ..Got unsolicited NOTIFY from 10.42.0.56:5060..
+18:43:34.672           pjsua_core.c  ....TX 372 bytes Response msg 200/NOTIFY/cseq=36097 (tdta0x5b4c63326cf8) to UDP 10.42.0.56:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.42.0.56:5060;rport=5060;received=10.42.0.56;branch=z9hG4bKPjd934af7d-e048-4292-8439-3e2cee50627f
+Call-ID: 5d4fbc36-2bd5-4d6c-a3e5-ddd6712f0bb0
+From: <sip:2001@10.42.0.56>;tag=e921189e-5b84-4e6a-b6bb-d71163307069
+To: <sip:2001@10.42.0.1;ob>;tag=z9hG4bKPjd934af7d-e048-4292-8439-3e2cee50627f
+CSeq: 36097 NOTIFY
+Content-Length:  0
+
+
+--end msg--
+18:43:34.673            pjsua_app.c  ...Received MWI for acc 2:
+18:43:34.673            pjsua_app.c  ... Content-Type: application/simple-message-summary
+18:43:34.673            pjsua_app.c  ... Body:
+Messages-Waiting: no
+Voice-Message: 0/0 (0/0)
+
+18:43:35.645            pjsua_aud.c  .Closing sound device after idle for 1 second(s)
+18:43:35.645            pjsua_app.c  ..Turning sound device -99 -99 OFF
+18:43:35.645            pjsua_aud.c  ..Closing null sound device..
+18:43:37.277           pjsua_core.c  ..RX 639 bytes Request msg NOTIFY/cseq=45939 (rdata0x5b4c633199b8) from UDP 10.42.0.56:5060:
+NOTIFY sip:2001@10.42.0.1:7001;ob SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.56:5060;rport;branch=z9hG4bKPj484f8407-ce9c-4cf7-941b-3e7a855ae4f0
+From: <sip:2001@10.42.0.56>;tag=17bf7d0c-b539-4fba-acd8-6f908253d969
+To: <sip:2001@10.42.0.1;ob>
+Contact: <sip:2001@10.42.0.56:5060>
+Call-ID: 5567b6b0-6ce8-4877-9678-a7d946cddee4
+CSeq: 45939 NOTIFY
+Subscription-State: terminated
+Event: message-summary
+Allow-Events: presence, dialog, message-summary, refer
+Max-Forwards: 70
+User-Agent: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Type: application/simple-message-summary
+Content-Length:    48
+
+Messages-Waiting: no
+Voice-Message: 0/0 (0/0)
+
+--end msg--
+18:43:37.277           pjsua_pres.c  ..Got unsolicited NOTIFY from 10.42.0.56:5060..
+18:43:37.278           pjsua_core.c  ....TX 372 bytes Response msg 200/NOTIFY/cseq=45939 (tdta0x5b4c63323148) to UDP 10.42.0.56:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.42.0.56:5060;rport=5060;received=10.42.0.56;branch=z9hG4bKPj484f8407-ce9c-4cf7-941b-3e7a855ae4f0
+Call-ID: 5567b6b0-6ce8-4877-9678-a7d946cddee4
+From: <sip:2001@10.42.0.56>;tag=17bf7d0c-b539-4fba-acd8-6f908253d969
+To: <sip:2001@10.42.0.1;ob>;tag=z9hG4bKPj484f8407-ce9c-4cf7-941b-3e7a855ae4f0
+CSeq: 45939 NOTIFY
+Content-Length:  0
+
+
+--end msg--
+18:43:37.278            pjsua_app.c  ...Received MWI for acc 2:
+18:43:37.278            pjsua_app.c  ... Content-Type: application/simple-message-summary
+18:43:37.278            pjsua_app.c  ... Body:
+Messages-Waiting: no
+Voice-Message: 0/0 (0/0)
+
+18:43:39.181           pjsua_core.c  .Destroying...
+18:43:39.181        sip_transport.c  .Transport udp0x5b4c63296630 shutting down, force=0
+18:43:39.181             tcptp:7001  .SIP TCP transport destroyed
+18:43:39.181          pjsua_media.c  .Shutting down media..
+18:43:39.198      sip_transaction.c  .Stopping transaction layer module
+18:43:39.198      sip_transaction.c  .Stopped transaction layer module
+18:43:39.198         sip_endpoint.c  .Module "mod-default-handler" unregistered
+18:43:39.198         sip_endpoint.c  .Module "mod-unsolicited-mwi" unregistered
+18:43:39.198         sip_endpoint.c  .Module "mod-pjsua-options" unregistered
+18:43:39.198         sip_endpoint.c  .Module "mod-pjsua-im" unregistered
+18:43:39.198         sip_endpoint.c  .Module "mod-pjsua-pres" unregistered
+18:43:39.198         sip_endpoint.c  .Module "mod-pjsua" unregistered
+18:43:39.198         sip_endpoint.c  .Module "mod-stateful-util" unregistered
+18:43:39.198         sip_endpoint.c  .Module "mod-refer" unregistered
+18:43:39.198         sip_endpoint.c  .Module "mod-mwi" unregistered
+18:43:39.198         sip_endpoint.c  .Module "mod-presence" unregistered
+18:43:39.198         sip_endpoint.c  .Module "mod-evsub" unregistered
+18:43:39.198         sip_endpoint.c  .Module "mod-invite" unregistered
+18:43:39.198         sip_endpoint.c  .Module "mod-100rel" unregistered
+18:43:39.198         sip_endpoint.c  .Module "mod-ua" unregistered
+18:43:39.198      sip_transaction.c  .Transaction layer module destroyed
+18:43:39.198         sip_endpoint.c  .Module "mod-tsx-layer" unregistered
+18:43:39.198         sip_endpoint.c  .Module "mod-msg-print" unregistered
+18:43:39.198         sip_endpoint.c  .Module "mod-pjsua-log" unregistered
+18:43:39.199                timer.c  .Dumping timer heap:
+18:43:39.199                timer.c  .  Cur size: 2 entries, max: 3070
+18:43:39.199                timer.c  .  Entries: 
+18:43:39.199                timer.c  .    _id	Id	Elapsed	Source
+18:43:39.199                timer.c  .    ----------------------------------
+18:43:39.199                timer.c  .    6	0	8.460	../src/pjsua-lib/pjsua_acc.c:2257
+18:43:39.199                timer.c  .    2	1	289.460	../src/pjsip-ua/sip_reg.c:864
+18:43:39.199         sip_endpoint.c  .Endpoint 0x5b4c6326dc78 destroyed
+18:43:39.199      udp0x5b4c63296630  .Pool is not released by application, releasing now
+18:43:39.199     glck0x5b4c63318350  .Pool is not released by application, releasing now
+18:43:39.199      rtd0x5b4c63318980  .Pool is not released by application, releasing now
+18:43:39.199     regc0x5b4c6331d1a0  .Pool is not released by application, releasing now
+18:43:39.199 auth_cli0x5b4c63280700  .Pool is not released by application, releasing now
+18:43:39.199           pjsua_core.c  .PJSUA state changed: CLOSING --> NULL
+18:43:39.199           pjsua_core.c  .PJSUA destroyed...
+[full_validation] Calling 2004 from 2003 for 30s
+[full_validation] > sudo env ASTERISK_PBX_IP=10.42.0.56 ASTERISK_CONTAINER=asterisk01 ./simulate_softphones.sh call 2003 2004 30
+Dialing 2004 from 2003 (duration 30s)
+18:43:41.264         sip_endpoint.c !.Module "mod-pjsua-log" registered
+18:43:41.264         sip_endpoint.c  .Module "mod-tsx-layer" registered
+18:43:41.264         sip_endpoint.c  .Module "mod-stateful-util" registered
+18:43:41.264         sip_endpoint.c  .Module "mod-ua" registered
+18:43:41.264         sip_endpoint.c  .Module "mod-100rel" registered
+18:43:41.264         sip_endpoint.c  .Module "mod-pjsua" registered
+18:43:41.264         sip_endpoint.c  .Module "mod-invite" registered
+18:43:41.372             alsa_dev.c  ..ALSA driver found 19 devices
+18:43:41.372             alsa_dev.c  ..ALSA initialized
+18:43:41.372                  pjlib  ..select() I/O Queue created (0x6419b642b728)
+18:43:41.383         sip_endpoint.c  .Module "mod-evsub" registered
+18:43:41.383         sip_endpoint.c  .Module "mod-presence" registered
+18:43:41.383         sip_endpoint.c  .Module "mod-mwi" registered
+18:43:41.383         sip_endpoint.c  .Module "mod-refer" registered
+18:43:41.383         sip_endpoint.c  .Module "mod-pjsua-pres" registered
+18:43:41.383         sip_endpoint.c  .Module "mod-pjsua-im" registered
+18:43:41.383         sip_endpoint.c  .Module "mod-pjsua-options" registered
+18:43:41.383           pjsua_core.c  .1 SIP worker threads created
+18:43:41.383           pjsua_core.c  .pjsua version 2.14.1 for Linux-6.14.0.29/x86_64/glibc-2.39 initialized
+18:43:41.383           pjsua_core.c  .PJSUA state changed: CREATED --> INIT
+18:43:41.383         sip_endpoint.c  Module "mod-default-handler" registered
+18:43:41.384           pjsua_core.c  SIP UDP socket reachable at 10.0.2.15:7003
+18:43:41.384      udp0x6419b63de630  SIP UDP transport started, published address is 10.0.2.15:7003
+18:43:41.384            pjsua_acc.c  Adding account: id=<sip:10.0.2.15:7003>
+18:43:41.384            pjsua_acc.c  .Account <sip:10.0.2.15:7003> added with id 0
+18:43:41.384            pjsua_acc.c  Modifying account 0
+18:43:41.384            pjsua_acc.c  Acc 0: setting online status to 1..
+18:43:41.384             tcptp:7003  SIP TCP listener ready for incoming connections at 10.0.2.15:7003
+18:43:41.384            pjsua_acc.c  Adding account: id=<sip:10.0.2.15:7003;transport=TCP>
+18:43:41.384            pjsua_acc.c  .Account <sip:10.0.2.15:7003;transport=TCP> added with id 1
+18:43:41.384            pjsua_acc.c  Modifying account 1
+18:43:41.384            pjsua_acc.c  Acc 1: setting online status to 1..
+18:43:41.384            pjsua_acc.c  Adding account: id=sip:2003@10.42.0.56
+18:43:41.384            pjsua_acc.c  .Account sip:2003@10.42.0.56 added with id 2
+18:43:41.384            pjsua_acc.c  .Acc 2: setting registration..
+18:43:41.384           pjsua_core.c  ...TX 530 bytes Request msg REGISTER/cseq=4805 (tdta0x6419b6466818) to UDP 10.42.0.56:5060:
+REGISTER sip:10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7003;rport;branch=z9hG4bKPjA.TKpoXLYZ7W.ItdjlK4przZIEHxtkkr
+Max-Forwards: 70
+From: <sip:2003@10.42.0.56>;tag=xWgRS9SCUyl4XSZXS7B8rBptiGp0u8fz
+To: <sip:2003@10.42.0.56>
+Call-ID: WMuakRJJcQGppsZ6tWorOE38tFyMI8fI
+CSeq: 4805 REGISTER
+User-Agent: PJSUA v2.14.1 Linux-6.14.0.29/x86_64/glibc-2.39
+Contact: <sip:2003@10.42.0.1:7003;ob>
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Content-Length:  0
+
+
+--end msg--
+18:43:41.384            pjsua_acc.c  ..Acc 2: Registration sent
+18:43:41.384            pjsua_acc.c  Acc 2: setting online status to 1..
+18:43:41.384           pjsua_pres.c  Adding buddy: sip:2004@10.42.0.56
+18:43:41.384           pjsua_pres.c  .Buddy 0 added.
+18:43:41.384           pjsua_pres.c  ..Buddy 0: updating presence..
+18:43:41.384            pjsua_aud.c  Setting null sound device..
+18:43:41.384            pjsua_app.c  .Turning sound device -99 -99 ON
+18:43:41.384            pjsua_aud.c  .Opening null sound device..
+18:43:41.384           pjsua_core.c  PJSUA state changed: INIT --> STARTING
+18:43:41.384         sip_endpoint.c  .Module "mod-unsolicited-mwi" registered
+18:43:41.384           pjsua_core.c  .PJSUA state changed: STARTING --> RUNNING
+18:43:41.384                 main.c  Ready: Success
+18:43:41.384           pjsua_call.c  Making call with acc #2 to sip:2004@10.42.0.56
+18:43:41.384          pjsua_media.c  .Call 0: initializing media..
+18:43:41.384          pjsua_media.c  ..RTP socket reachable at 10.0.2.15:4000
+18:43:41.384          pjsua_media.c  ..RTCP socket reachable at 10.0.2.15:4001
+18:43:41.384     srtp0x6419b63c8700  ..SRTP transport created
+18:43:41.384          pjsua_media.c  ..Media index 0 selected for audio call 0
+18:43:41.384      udp0x6419b646da30  ..UDP media transport created
+18:43:41.385           pjsua_core.c  ....TX 1249 bytes Request msg INVITE/cseq=6416 (tdta0x6419b6476788) to UDP 10.42.0.56:5060:
+INVITE sip:2004@10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7003;rport;branch=z9hG4bKPjoy3LCz8CF4QGDVLPusQbJ-nNrOnkzVeE
+Max-Forwards: 70
+From: sip:2003@10.42.0.56;tag=Pw8HfBfp6-hK3ctH6FpnDZa.QVqY1EtI
+To: sip:2004@10.42.0.56
+Contact: <sip:2003@10.42.0.1:7003;ob>
+Call-ID: 7Fa0P.rHQrE7WUPrBeoEiR4wyvzywXSd
+CSeq: 6416 INVITE
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Supported: replaces, 100rel, timer, norefersub
+Session-Expires: 1800
+Min-SE: 90
+User-Agent: PJSUA v2.14.1 Linux-6.14.0.29/x86_64/glibc-2.39
+Content-Type: application/sdp
+Content-Length:   619
+
+v=0
+o=- 3967548221 3967548221 IN IP4 10.0.2.15
+s=pjmedia
+b=AS:84
+t=0 0
+a=X-nat:0
+m=audio 4000 RTP/AVP 96 97 98 99 3 0 8 9 120 121 122
+c=IN IP4 10.0.2.15
+b=TIAS:64000
+a=rtcp:4001 IN IP4 10.0.2.15
+a=sendrecv
+a=rtpmap:96 speex/16000
+a=rtpmap:97 speex/8000
+a=rtpmap:98 speex/32000
+a=rtpmap:99 iLBC/8000
+a=fmtp:99 mode=30
+a=rtpmap:3 GSM/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:9 G722/8000
+a=rtpmap:120 telephone-event/16000
+a=fmtp:120 0-16
+a=rtpmap:121 telephone-event/8000
+a=fmtp:121 0-16
+a=rtpmap:122 telephone-event/32000
+a=fmtp:122 0-16
+a=ssrc:976851620 cname:1f8785256f2fb01a
+
+--end msg--
+18:43:41.385            pjsua_app.c  .......Call 0 state changed to CALLING
+>>>>
+Account list:
+  [ 0] <sip:10.0.2.15:7003>: does not register
+       Online status: Online
+  [ 1] <sip:10.0.2.15:7003;transport=TCP>: does not register
+       Online status: Online
+ *[ 2] sip:2003@10.42.0.56: 100/In Progress (expires=0)
+       Online status: Online
+Buddy list:
+ [ 1] <?>  sip:2004@10.42.0.56
+
++=============================================================================+
+|       Call Commands:         |   Buddy, IM & Presence:  |     Account:      |
+|                              |                          |                   |
+|  m  Make new call            | +b  Add new buddy        | +a  Add new accnt.|
+|  M  Make multiple calls      | -b  Delete buddy         | -a  Delete accnt. |
+|  a  Answer call              |  i  Send IM              | !a  Modify accnt. |
+|  h  Hangup call  (ha=all)    |  s  Subscribe presence   | rr  (Re-)register |
+|  H  Hold call                |  u  Unsubscribe presence | ru  Unregister    |
+|  v  re-inVite (release hold) |  t  Toggle online status |  >  Cycle next ac.|
+|  U  send UPDATE              |  T  Set online status    |  <  Cycle prev ac.|
+| ],[ Select next/prev call    +--------------------------+-------------------+
+|  x  Xfer call                |      Media Commands:     |  Status & Config: |
+|  X  Xfer with Replaces       |                          |                   |
+|  #  Send RFC 2833 DTMF       | cl  List ports           |  d  Dump status   |
+|  *  Send DTMF with INFO      | cc  Connect port         | dd  Dump detailed |
+| dq  Dump curr. call quality  | cd  Disconnect port      | dc  Dump config   |
+|                              |  V  Adjust audio Volume  |  f  Save config   |
+|  S  Send arbitrary REQUEST   | Cp  Codec priorities     |                   |
++-----------------------------------------------------------------------------+
+|  q  QUIT      L  ReLoad       I  IP change     n  detect NAT type           |
+|  sleep MS     echo [0|1|txt]                                                |
++=============================================================================+
+You have 1 active call
+Current call id=0 to sip:2004@10.42.0.56 [CALLING]
+>>> Cannot switch back to console from file redirection
+18:43:41.385           pjsua_core.c  Shutting down, flags=0...
+18:43:41.385           pjsua_core.c  PJSUA state changed: RUNNING --> CLOSING
+18:43:41.385           pjsua_core.c !.RX 552 bytes Response msg 401/REGISTER/cseq=4805 (rdata0x6419b64619b8) from UDP 10.42.0.56:5060:
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 10.42.0.1:7003;rport=7003;received=10.42.0.1;branch=z9hG4bKPjA.TKpoXLYZ7W.ItdjlK4przZIEHxtkkr
+Call-ID: WMuakRJJcQGppsZ6tWorOE38tFyMI8fI
+From: <sip:2003@10.42.0.56>;tag=xWgRS9SCUyl4XSZXS7B8rBptiGp0u8fz
+To: <sip:2003@10.42.0.56>;tag=z9hG4bKPjA.TKpoXLYZ7W.ItdjlK4przZIEHxtkkr
+CSeq: 4805 REGISTER
+WWW-Authenticate: Digest realm="asterisk",nonce="1758559421/2087a4604f6b502a35697a798d8bd095",opaque="2a026667565d70d0",algorithm=md5,qop="auth"
+Server: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Length:  0
+
+
+--end msg--
+18:43:41.385      sip_auth_client.c  ...Digest algorithm is "md5"
+18:43:41.385           pjsua_core.c  ....TX 815 bytes Request msg REGISTER/cseq=4806 (tdta0x6419b6466818) to UDP 10.42.0.56:5060:
+REGISTER sip:10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7003;rport;branch=z9hG4bKPj3HqbtHJpLa1ifgvAIc7nmkTVnSsimMDn
+Max-Forwards: 70
+From: <sip:2003@10.42.0.56>;tag=xWgRS9SCUyl4XSZXS7B8rBptiGp0u8fz
+To: <sip:2003@10.42.0.56>
+Call-ID: WMuakRJJcQGppsZ6tWorOE38tFyMI8fI
+CSeq: 4806 REGISTER
+User-Agent: PJSUA v2.14.1 Linux-6.14.0.29/x86_64/glibc-2.39
+Contact: <sip:2003@10.42.0.1:7003;ob>
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Authorization: Digest username="2003", realm="asterisk", nonce="1758559421/2087a4604f6b502a35697a798d8bd095", uri="sip:10.42.0.56", response="076020d579597716dfbed5c1b76d76a2", algorithm=md5, cnonce="fBHgmMzRMqLZ4fnV7p4BZiDrRarcIVhV", opaque="2a026667565d70d0", qop=auth, nc=00000001
+Content-Length:  0
+
+
+--end msg--
+18:43:41.385           pjsua_core.c  .RX 550 bytes Response msg 401/INVITE/cseq=6416 (rdata0x7c8074001bd8) from UDP 10.42.0.56:5060:
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 10.42.0.1:7003;rport=7003;received=10.42.0.1;branch=z9hG4bKPjoy3LCz8CF4QGDVLPusQbJ-nNrOnkzVeE
+Call-ID: 7Fa0P.rHQrE7WUPrBeoEiR4wyvzywXSd
+From: <sip:2003@10.42.0.56>;tag=Pw8HfBfp6-hK3ctH6FpnDZa.QVqY1EtI
+To: <sip:2004@10.42.0.56>;tag=z9hG4bKPjoy3LCz8CF4QGDVLPusQbJ-nNrOnkzVeE
+CSeq: 6416 INVITE
+WWW-Authenticate: Digest realm="asterisk",nonce="1758559421/2087a4604f6b502a35697a798d8bd095",opaque="1267874b4580f607",algorithm=md5,qop="auth"
+Server: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Length:  0
+
+
+--end msg--
+18:43:41.385           pjsua_core.c  ..TX 355 bytes Request msg ACK/cseq=6416 (tdta0x7c8074003ba8) to UDP 10.42.0.56:5060:
+ACK sip:2004@10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7003;rport;branch=z9hG4bKPjoy3LCz8CF4QGDVLPusQbJ-nNrOnkzVeE
+Max-Forwards: 70
+From: sip:2003@10.42.0.56;tag=Pw8HfBfp6-hK3ctH6FpnDZa.QVqY1EtI
+To: sip:2004@10.42.0.56;tag=z9hG4bKPjoy3LCz8CF4QGDVLPusQbJ-nNrOnkzVeE
+Call-ID: 7Fa0P.rHQrE7WUPrBeoEiR4wyvzywXSd
+CSeq: 6416 ACK
+Content-Length:  0
+
+
+--end msg--
+18:43:41.385      sip_auth_client.c  ....Digest algorithm is "md5"
+18:43:41.385     tcpc0x7c8074007cd8  .......TCP client transport created
+18:43:41.385     tcpc0x7c8074007cd8  .......TCP transport 10.42.0.1:44129 is connecting to 10.42.0.56:5060...
+18:43:41.385           pjsua_core.c  .......TX 1546 bytes Request msg INVITE/cseq=6417 (tdta0x6419b6476788) to TCP 10.42.0.56:5060:
+INVITE sip:2004@10.42.0.56 SIP/2.0
+Via: SIP/2.0/TCP 10.42.0.1:44129;rport;branch=z9hG4bKPjM80insKamXrnFWrO1r4ScLD2eR.yFXJ6;alias
+Max-Forwards: 70
+From: sip:2003@10.42.0.56;tag=Pw8HfBfp6-hK3ctH6FpnDZa.QVqY1EtI
+To: sip:2004@10.42.0.56
+Contact: <sip:2003@10.42.0.1:7003;ob>
+Call-ID: 7Fa0P.rHQrE7WUPrBeoEiR4wyvzywXSd
+CSeq: 6417 INVITE
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Supported: replaces, 100rel, timer, norefersub
+Session-Expires: 1800
+Min-SE: 90
+User-Agent: PJSUA v2.14.1 Linux-6.14.0.29/x86_64/glibc-2.39
+Authorization: Digest username="2003", realm="asterisk", nonce="1758559421/2087a4604f6b502a35697a798d8bd095", uri="sip:2004@10.42.0.56", response="586d6773f344d071e9aa6ed1968232cd", algorithm=md5, cnonce="AJkCdj2miGYdht4Mq97HfbWAcPvUD3Ay", opaque="1267874b4580f607", qop=auth, nc=00000001
+Content-Type: application/sdp
+Content-Length:   619
+
+v=0
+o=- 3967548221 3967548221 IN IP4 10.0.2.15
+s=pjmedia
+b=AS:84
+t=0 0
+a=X-nat:0
+m=audio 4000 RTP/AVP 96 97 98 99 3 0 8 9 120 121 122
+c=IN IP4 10.0.2.15
+b=TIAS:64000
+a=rtcp:4001 IN IP4 10.0.2.15
+a=sendrecv
+a=rtpmap:96 speex/16000
+a=rtpmap:97 speex/8000
+a=rtpmap:98 speex/32000
+a=rtpmap:99 iLBC/8000
+a=fmtp:99 mode=30
+a=rtpmap:3 GSM/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:9 G722/8000
+a=rtpmap:120 telephone-event/16000
+a=fmtp:120 0-16
+a=rtpmap:121 telephone-event/8000
+a=fmtp:121 0-16
+a=rtpmap:122 telephone-event/32000
+a=fmtp:122 0-16
+a=ssrc:976851620 cname:1f8785256f2fb01a
+
+--end msg--
+18:43:41.386           pjsua_call.c !.Hangup all calls..
+18:43:41.386           pjsua_call.c  ..Call 0 hanging up: code=0..
+18:43:41.386          pjsua_media.c  ...Call 0: deinitializing media..
+18:43:41.386          pjsua_media.c  ....
+  [CALLING] To: sip:2004@10.42.0.56
+    Call time: 00h:00m:00s, 1st res in 2 ms, conn in 0ms
+18:43:41.386          pjsua_media.c  ....Call 0: cleaning up provisional media, prov_med_cnt=1, med_cnt=0
+18:43:41.386     srtp0x6419b63c8700  ....Destroying SRTP transport
+18:43:41.386      udp0x6419b646da30  ....UDP media transport destroyed
+18:43:41.386     srtp0x6419b63c8700  ....SRTP transport destroyed
+18:43:41.386            pjsua_app.c  ...Call 0 is DISCONNECTED [reason=487 (Request Terminated)]
+18:43:41.386      inv0x6419b646c6a8  ....Delaying CANCEL since no provisional response is received yet
+18:43:41.386          pjsua_media.c  .Call 0: deinitializing media..
+18:43:41.386          pjsua_media.c  ..
+  [DISCONNECTED] To: sip:2004@10.42.0.56
+    Call time: 00h:00m:00s, 1st res in 2 ms, conn in 0ms
+18:43:41.386          pjsua_media.c  .Call 1: deinitializing media..
+18:43:41.386          pjsua_media.c  .Call 2: deinitializing media..
+18:43:41.386          pjsua_media.c  .Call 3: deinitializing media..
+18:43:41.386           pjsua_pres.c  .Shutting down presence..
+18:43:41.386            pjsua_acc.c  .Acc 2: setting unregistration..
+18:43:41.386              sip_reg.c  ..Unable to send request, regc has another transaction pending
+18:43:41.386            pjsua_acc.c  ..Unable to create/send REGISTER: Object is busy (PJSIP_EBUSY) [status=171001]
+18:43:41.387           pjsua_core.c  ..RX 549 bytes Response msg 200/REGISTER/cseq=4806 (rdata0x7c8074001bd8) from UDP 10.42.0.56:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.42.0.1:7003;rport=7003;received=10.42.0.1;branch=z9hG4bKPj3HqbtHJpLa1ifgvAIc7nmkTVnSsimMDn
+Call-ID: WMuakRJJcQGppsZ6tWorOE38tFyMI8fI
+From: <sip:2003@10.42.0.56>;tag=xWgRS9SCUyl4XSZXS7B8rBptiGp0u8fz
+To: <sip:2003@10.42.0.56>;tag=z9hG4bKPj3HqbtHJpLa1ifgvAIc7nmkTVnSsimMDn
+CSeq: 4806 REGISTER
+Date: Mon, 22 Sep 2025 16:43:41 GMT
+Contact: <sip:2003@10.42.0.1:6003;ob>;expires=273
+Contact: <sip:2003@10.42.0.1:7003;ob>;expires=299
+Expires: 300
+Server: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Length:  0
+
+
+--end msg--
+18:43:41.387            pjsua_acc.c  .....SIP outbound status for acc 2 is not active
+18:43:41.387            pjsua_acc.c  .....sip:2003@10.42.0.56: registration success, status=200 (OK), will re-register in 299 seconds
+18:43:41.387            pjsua_acc.c  .....Keep-alive timer started for acc 2, destination:10.42.0.56:5060, interval:12s
+18:43:41.387     tcpc0x7c8074007cd8  .TCP connect() error: [code=120111]: Connection refused
+18:43:41.387      tsx0x7c8074006f18  .Temporary failure in sending Request msg INVITE/cseq=6417 (tdta0x6419b6476788), will try next server: Connection refused
+18:43:41.387           pjsua_core.c  .TX 1539 bytes Request msg INVITE/cseq=6417 (tdta0x6419b6476788) to UDP 10.42.0.56:5060:
+INVITE sip:2004@10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.0.2.15:7003;rport;branch=z9hG4bKPjM80insKamXrnFWrO1r4ScLD2eR.yFXJ6
+Max-Forwards: 70
+From: sip:2003@10.42.0.56;tag=Pw8HfBfp6-hK3ctH6FpnDZa.QVqY1EtI
+To: sip:2004@10.42.0.56
+Contact: <sip:2003@10.42.0.1:7003;ob>
+Call-ID: 7Fa0P.rHQrE7WUPrBeoEiR4wyvzywXSd
+CSeq: 6417 INVITE
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Supported: replaces, 100rel, timer, norefersub
+Session-Expires: 1800
+Min-SE: 90
+User-Agent: PJSUA v2.14.1 Linux-6.14.0.29/x86_64/glibc-2.39
+Authorization: Digest username="2003", realm="asterisk", nonce="1758559421/2087a4604f6b502a35697a798d8bd095", uri="sip:2004@10.42.0.56", response="586d6773f344d071e9aa6ed1968232cd", algorithm=md5, cnonce="AJkCdj2miGYdht4Mq97HfbWAcPvUD3Ay", opaque="1267874b4580f607", qop=auth, nc=00000001
+Content-Type: application/sdp
+Content-Length:   619
+
+v=0
+o=- 3967548221 3967548221 IN IP4 10.0.2.15
+s=pjmedia
+b=AS:84
+t=0 0
+a=X-nat:0
+m=audio 4000 RTP/AVP 96 97 98 99 3 0 8 9 120 121 122
+c=IN IP4 10.0.2.15
+b=TIAS:64000
+a=rtcp:4001 IN IP4 10.0.2.15
+a=sendrecv
+a=rtpmap:96 speex/16000
+a=rtpmap:97 speex/8000
+a=rtpmap:98 speex/32000
+a=rtpmap:99 iLBC/8000
+a=fmtp:99 mode=30
+a=rtpmap:3 GSM/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:9 G722/8000
+a=rtpmap:120 telephone-event/16000
+a=fmtp:120 0-16
+a=rtpmap:121 telephone-event/8000
+a=fmtp:121 0-16
+a=rtpmap:122 telephone-event/32000
+a=fmtp:122 0-16
+a=ssrc:976851620 cname:1f8785256f2fb01a
+
+--end msg--
+18:43:41.387            pjsua_app.c  .SIP TCP transport is disconnected from 10.42.0.56:5060: Connection refused [status=120111]
+18:43:41.387            pjsua_acc.c  .Disconnected notification for transport tcpc0x7c8074007cd8
+18:43:41.387        sip_transport.c  ..Transport tcpc0x7c8074007cd8 shutting down, force=0
+18:43:41.387        sip_transport.c  .Transport tcpc0x7c8074007cd8 is being destroyed due to timeout in idle timer
+18:43:41.387     tcpc0x7c8074007cd8  .TCP transport destroyed with reason 120111: Connection refused
+18:43:41.389           pjsua_core.c  ..RX 352 bytes Response msg 100/INVITE/cseq=6417 (rdata0x6419b64619b8) from UDP 10.42.0.56:5060:
+SIP/2.0 100 Trying
+Via: SIP/2.0/UDP 10.0.2.15:7003;rport=7003;received=10.42.0.1;branch=z9hG4bKPjM80insKamXrnFWrO1r4ScLD2eR.yFXJ6
+Call-ID: 7Fa0P.rHQrE7WUPrBeoEiR4wyvzywXSd
+From: <sip:2003@10.42.0.56>;tag=Pw8HfBfp6-hK3ctH6FpnDZa.QVqY1EtI
+To: <sip:2004@10.42.0.56>
+CSeq: 6417 INVITE
+Server: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Length:  0
+
+
+--end msg--
+18:43:41.389           pjsua_core.c  ........TX 315 bytes Request msg CANCEL/cseq=6417 (tdta0x6419b6470d18) to UDP 10.42.0.56:5060:
+CANCEL sip:2004@10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.0.2.15:7003;rport;branch=z9hG4bKPjM80insKamXrnFWrO1r4ScLD2eR.yFXJ6
+Max-Forwards: 70
+From: sip:2003@10.42.0.56;tag=Pw8HfBfp6-hK3ctH6FpnDZa.QVqY1EtI
+To: sip:2004@10.42.0.56
+Call-ID: 7Fa0P.rHQrE7WUPrBeoEiR4wyvzywXSd
+CSeq: 6417 CANCEL
+Content-Length:  0
+
+
+--end msg--
+18:43:41.400           pjsua_core.c  ..RX 639 bytes Request msg NOTIFY/cseq=49228 (rdata0x6419b64619b8) from UDP 10.42.0.56:5060:
+NOTIFY sip:2003@10.42.0.1:7003;ob SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.56:5060;rport;branch=z9hG4bKPj327607cb-e0a9-4bbe-825c-c29c1cadf195
+From: <sip:2003@10.42.0.56>;tag=b9a582e7-69ba-47b5-aa74-217069e8edce
+To: <sip:2003@10.42.0.1;ob>
+Contact: <sip:2003@10.42.0.56:5060>
+Call-ID: 19056edc-a8e7-4e1c-b114-6187ebe7cfa9
+CSeq: 49228 NOTIFY
+Subscription-State: terminated
+Event: message-summary
+Allow-Events: presence, dialog, message-summary, refer
+Max-Forwards: 70
+User-Agent: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Type: application/simple-message-summary
+Content-Length:    48
+
+Messages-Waiting: no
+Voice-Message: 0/0 (0/0)
+
+--end msg--
+18:43:41.400           pjsua_pres.c  ..Got unsolicited NOTIFY from 10.42.0.56:5060..
+18:43:41.400           pjsua_core.c  ....TX 372 bytes Response msg 200/NOTIFY/cseq=49228 (tdta0x6419b645d2a8) to UDP 10.42.0.56:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.42.0.56:5060;rport=5060;received=10.42.0.56;branch=z9hG4bKPj327607cb-e0a9-4bbe-825c-c29c1cadf195
+Call-ID: 19056edc-a8e7-4e1c-b114-6187ebe7cfa9
+From: <sip:2003@10.42.0.56>;tag=b9a582e7-69ba-47b5-aa74-217069e8edce
+To: <sip:2003@10.42.0.1;ob>;tag=z9hG4bKPj327607cb-e0a9-4bbe-825c-c29c1cadf195
+CSeq: 49228 NOTIFY
+Content-Length:  0
+
+
+--end msg--
+18:43:41.401            pjsua_app.c  ...Received MWI for acc 2:
+18:43:41.401            pjsua_app.c  ... Content-Type: application/simple-message-summary
+18:43:41.401            pjsua_app.c  ... Body:
+Messages-Waiting: no
+Voice-Message: 0/0 (0/0)
+
+18:43:41.890           pjsua_core.c  ..TX 315 bytes Request msg CANCEL/cseq=6417 (tdta0x6419b6470d18) to UDP 10.42.0.56:5060:
+CANCEL sip:2004@10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.0.2.15:7003;rport;branch=z9hG4bKPjM80insKamXrnFWrO1r4ScLD2eR.yFXJ6
+Max-Forwards: 70
+From: sip:2003@10.42.0.56;tag=Pw8HfBfp6-hK3ctH6FpnDZa.QVqY1EtI
+To: sip:2004@10.42.0.56
+Call-ID: 7Fa0P.rHQrE7WUPrBeoEiR4wyvzywXSd
+CSeq: 6417 CANCEL
+Content-Length:  0
+
+
+--end msg--
+18:43:42.384            pjsua_aud.c  .Closing sound device after idle for 1 second(s)
+18:43:42.384            pjsua_app.c  ..Turning sound device -99 -99 OFF
+18:43:42.384            pjsua_aud.c  ..Closing null sound device..
+18:43:42.890           pjsua_core.c  ..TX 315 bytes Request msg CANCEL/cseq=6417 (tdta0x6419b6470d18) to UDP 10.42.0.56:5060:
+CANCEL sip:2004@10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.0.2.15:7003;rport;branch=z9hG4bKPjM80insKamXrnFWrO1r4ScLD2eR.yFXJ6
+Max-Forwards: 70
+From: sip:2003@10.42.0.56;tag=Pw8HfBfp6-hK3ctH6FpnDZa.QVqY1EtI
+To: sip:2004@10.42.0.56
+Call-ID: 7Fa0P.rHQrE7WUPrBeoEiR4wyvzywXSd
+CSeq: 6417 CANCEL
+Content-Length:  0
+
+
+--end msg--
+18:43:44.890           pjsua_core.c  ..TX 315 bytes Request msg CANCEL/cseq=6417 (tdta0x6419b6470d18) to UDP 10.42.0.56:5060:
+CANCEL sip:2004@10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.0.2.15:7003;rport;branch=z9hG4bKPjM80insKamXrnFWrO1r4ScLD2eR.yFXJ6
+Max-Forwards: 70
+From: sip:2003@10.42.0.56;tag=Pw8HfBfp6-hK3ctH6FpnDZa.QVqY1EtI
+To: sip:2004@10.42.0.56
+Call-ID: 7Fa0P.rHQrE7WUPrBeoEiR4wyvzywXSd
+CSeq: 6417 CANCEL
+Content-Length:  0
+
+
+--end msg--
+18:43:45.889           pjsua_core.c  .Destroying...
+18:43:45.889        sip_transport.c  .Transport udp0x6419b63de630 shutting down, force=0
+18:43:45.889             tcptp:7003  .SIP TCP transport destroyed
+18:43:45.889          pjsua_media.c  .Shutting down media..
+18:43:45.900      sip_transaction.c  .Stopping transaction layer module
+18:43:45.900      sip_transaction.c  .Stopped transaction layer module
+18:43:45.900         sip_endpoint.c  .Module "mod-default-handler" unregistered
+18:43:45.900         sip_endpoint.c  .Module "mod-unsolicited-mwi" unregistered
+18:43:45.900         sip_endpoint.c  .Module "mod-pjsua-options" unregistered
+18:43:45.900         sip_endpoint.c  .Module "mod-pjsua-im" unregistered
+18:43:45.900         sip_endpoint.c  .Module "mod-pjsua-pres" unregistered
+18:43:45.900         sip_endpoint.c  .Module "mod-pjsua" unregistered
+18:43:45.900         sip_endpoint.c  .Module "mod-stateful-util" unregistered
+18:43:45.900         sip_endpoint.c  .Module "mod-refer" unregistered
+18:43:45.900         sip_endpoint.c  .Module "mod-mwi" unregistered
+18:43:45.900         sip_endpoint.c  .Module "mod-presence" unregistered
+18:43:45.900         sip_endpoint.c  .Module "mod-evsub" unregistered
+18:43:45.900         sip_endpoint.c  .Module "mod-invite" unregistered
+18:43:45.900         sip_endpoint.c  .Module "mod-100rel" unregistered
+18:43:45.900         sip_endpoint.c  .Module "mod-ua" unregistered
+18:43:45.900      sip_transaction.c  .Transaction layer module destroyed
+18:43:45.900         sip_endpoint.c  .Module "mod-tsx-layer" unregistered
+18:43:45.900         sip_endpoint.c  .Module "mod-msg-print" unregistered
+18:43:45.900         sip_endpoint.c  .Module "mod-pjsua-log" unregistered
+18:43:45.902                timer.c  .Dumping timer heap:
+18:43:45.902                timer.c  .  Cur size: 2 entries, max: 3070
+18:43:45.902                timer.c  .  Entries: 
+18:43:45.902                timer.c  .    _id	Id	Elapsed	Source
+18:43:45.902                timer.c  .    ----------------------------------
+18:43:45.902                timer.c  .    4	0	7.485	../src/pjsua-lib/pjsua_acc.c:2257
+18:43:45.902                timer.c  .    2	1	289.485	../src/pjsip-ua/sip_reg.c:864
+18:43:45.902         sip_endpoint.c  .Endpoint 0x6419b63b5c78 destroyed
+18:43:45.902      udp0x6419b63de630  .Pool is not released by application, releasing now
+18:43:45.902     glck0x6419b6460350  .Pool is not released by application, releasing now
+18:43:45.902      rtd0x6419b6460980  .Pool is not released by application, releasing now
+18:43:45.902     regc0x6419b64651a0  .Pool is not released by application, releasing now
+18:43:45.902 auth_cli0x7c8074000f90  .Pool is not released by application, releasing now
+18:43:45.902           pjsua_core.c  .PJSUA state changed: CLOSING --> NULL
+18:43:45.902           pjsua_core.c  .PJSUA destroyed...
+[full_validation] Calling 2006 from 2005 for 30s
+[full_validation] > sudo env ASTERISK_PBX_IP=10.42.0.56 ASTERISK_CONTAINER=asterisk01 ./simulate_softphones.sh call 2005 2006 30
+Dialing 2006 from 2005 (duration 30s)
+18:43:47.968         sip_endpoint.c !.Module "mod-pjsua-log" registered
+18:43:47.968         sip_endpoint.c  .Module "mod-tsx-layer" registered
+18:43:47.968         sip_endpoint.c  .Module "mod-stateful-util" registered
+18:43:47.968         sip_endpoint.c  .Module "mod-ua" registered
+18:43:47.968         sip_endpoint.c  .Module "mod-100rel" registered
+18:43:47.968         sip_endpoint.c  .Module "mod-pjsua" registered
+18:43:47.968         sip_endpoint.c  .Module "mod-invite" registered
+18:43:48.020             alsa_dev.c  ..ALSA driver found 19 devices
+18:43:48.020             alsa_dev.c  ..ALSA initialized
+18:43:48.020                  pjlib  ..select() I/O Queue created (0x5a07077cc728)
+18:43:48.025         sip_endpoint.c  .Module "mod-evsub" registered
+18:43:48.025         sip_endpoint.c  .Module "mod-presence" registered
+18:43:48.025         sip_endpoint.c  .Module "mod-mwi" registered
+18:43:48.025         sip_endpoint.c  .Module "mod-refer" registered
+18:43:48.025         sip_endpoint.c  .Module "mod-pjsua-pres" registered
+18:43:48.025         sip_endpoint.c  .Module "mod-pjsua-im" registered
+18:43:48.025         sip_endpoint.c  .Module "mod-pjsua-options" registered
+18:43:48.025           pjsua_core.c  .1 SIP worker threads created
+18:43:48.025           pjsua_core.c  .pjsua version 2.14.1 for Linux-6.14.0.29/x86_64/glibc-2.39 initialized
+18:43:48.025           pjsua_core.c  .PJSUA state changed: CREATED --> INIT
+18:43:48.025         sip_endpoint.c  Module "mod-default-handler" registered
+18:43:48.025           pjsua_core.c  SIP UDP socket reachable at 10.0.2.15:7005
+18:43:48.025      udp0x5a070777f630  SIP UDP transport started, published address is 10.0.2.15:7005
+18:43:48.025            pjsua_acc.c  Adding account: id=<sip:10.0.2.15:7005>
+18:43:48.025            pjsua_acc.c  .Account <sip:10.0.2.15:7005> added with id 0
+18:43:48.025            pjsua_acc.c  Modifying account 0
+18:43:48.025            pjsua_acc.c  Acc 0: setting online status to 1..
+18:43:48.026             tcptp:7005  SIP TCP listener ready for incoming connections at 10.0.2.15:7005
+18:43:48.026            pjsua_acc.c  Adding account: id=<sip:10.0.2.15:7005;transport=TCP>
+18:43:48.026            pjsua_acc.c  .Account <sip:10.0.2.15:7005;transport=TCP> added with id 1
+18:43:48.026            pjsua_acc.c  Modifying account 1
+18:43:48.026            pjsua_acc.c  Acc 1: setting online status to 1..
+18:43:48.026            pjsua_acc.c  Adding account: id=sip:2005@10.42.0.56
+18:43:48.026            pjsua_acc.c  .Account sip:2005@10.42.0.56 added with id 2
+18:43:48.026            pjsua_acc.c  .Acc 2: setting registration..
+18:43:48.026           pjsua_core.c  ...TX 531 bytes Request msg REGISTER/cseq=48640 (tdta0x5a0707807818) to UDP 10.42.0.56:5060:
+REGISTER sip:10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7005;rport;branch=z9hG4bKPjWJmexmoaRhoObQAd7TlZBIe6AhyVnmEJ
+Max-Forwards: 70
+From: <sip:2005@10.42.0.56>;tag=TKMwIY7V2GwqABed5QE6f29rac.M-rXX
+To: <sip:2005@10.42.0.56>
+Call-ID: AJLr-kjNKQNGoRJ-huNzxqvMGCafM.GS
+CSeq: 48640 REGISTER
+User-Agent: PJSUA v2.14.1 Linux-6.14.0.29/x86_64/glibc-2.39
+Contact: <sip:2005@10.42.0.1:7005;ob>
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Content-Length:  0
+
+
+--end msg--
+18:43:48.026            pjsua_acc.c  ..Acc 2: Registration sent
+18:43:48.026            pjsua_acc.c  Acc 2: setting online status to 1..
+18:43:48.026           pjsua_pres.c  Adding buddy: sip:2006@10.42.0.56
+18:43:48.026           pjsua_pres.c  .Buddy 0 added.
+18:43:48.026           pjsua_pres.c  ..Buddy 0: updating presence..
+18:43:48.026            pjsua_aud.c  Setting null sound device..
+18:43:48.026            pjsua_app.c  .Turning sound device -99 -99 ON
+18:43:48.026            pjsua_aud.c  .Opening null sound device..
+18:43:48.026           pjsua_core.c  PJSUA state changed: INIT --> STARTING
+18:43:48.026         sip_endpoint.c  .Module "mod-unsolicited-mwi" registered
+18:43:48.026           pjsua_core.c  .PJSUA state changed: STARTING --> RUNNING
+18:43:48.026                 main.c  Ready: Success
+18:43:48.026           pjsua_call.c  Making call with acc #2 to sip:2006@10.42.0.56
+18:43:48.026          pjsua_media.c  .Call 0: initializing media..
+18:43:48.026          pjsua_media.c  ..RTP socket reachable at 10.0.2.15:4000
+18:43:48.026          pjsua_media.c  ..RTCP socket reachable at 10.0.2.15:4001
+18:43:48.026     srtp0x5a0707769700  ..SRTP transport created
+18:43:48.026          pjsua_media.c  ..Media index 0 selected for audio call 0
+18:43:48.026      udp0x5a070780ea30  ..UDP media transport created
+18:43:48.027           pjsua_core.c  ....TX 1250 bytes Request msg INVITE/cseq=24280 (tdta0x5a0707817788) to UDP 10.42.0.56:5060:
+INVITE sip:2006@10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7005;rport;branch=z9hG4bKPj6Sesh7qK0Wo-xPz7v4wGAGzy3GbJ7rxU
+Max-Forwards: 70
+From: sip:2005@10.42.0.56;tag=KigGcE31fFFjPPFYB0zybUxSLbz6yhmm
+To: sip:2006@10.42.0.56
+Contact: <sip:2005@10.42.0.1:7005;ob>
+Call-ID: pZJ37vvpMWZvbltl1TGSDE4XjV2.I6s0
+CSeq: 24280 INVITE
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Supported: replaces, 100rel, timer, norefersub
+Session-Expires: 1800
+Min-SE: 90
+User-Agent: PJSUA v2.14.1 Linux-6.14.0.29/x86_64/glibc-2.39
+Content-Type: application/sdp
+Content-Length:   619
+
+v=0
+o=- 3967548228 3967548228 IN IP4 10.0.2.15
+s=pjmedia
+b=AS:84
+t=0 0
+a=X-nat:0
+m=audio 4000 RTP/AVP 96 97 98 99 3 0 8 9 120 121 122
+c=IN IP4 10.0.2.15
+b=TIAS:64000
+a=rtcp:4001 IN IP4 10.0.2.15
+a=sendrecv
+a=rtpmap:96 speex/16000
+a=rtpmap:97 speex/8000
+a=rtpmap:98 speex/32000
+a=rtpmap:99 iLBC/8000
+a=fmtp:99 mode=30
+a=rtpmap:3 GSM/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:9 G722/8000
+a=rtpmap:120 telephone-event/16000
+a=fmtp:120 0-16
+a=rtpmap:121 telephone-event/8000
+a=fmtp:121 0-16
+a=rtpmap:122 telephone-event/32000
+a=fmtp:122 0-16
+a=ssrc:119717242 cname:3aaf2809304c5380
+
+--end msg--
+18:43:48.027            pjsua_app.c  .......Call 0 state changed to CALLING
+>>>>
+Account list:
+  [ 0] <sip:10.0.2.15:7005>: does not register
+       Online status: Online
+  [ 1] <sip:10.0.2.15:7005;transport=TCP>: does not register
+       Online status: Online
+ *[ 2] sip:2005@10.42.0.56: 100/In Progress (expires=0)
+       Online status: Online
+Buddy list:
+ [ 1] <?>  sip:2006@10.42.0.56
+
++=============================================================================+
+|       Call Commands:         |   Buddy, IM & Presence:  |     Account:      |
+|                              |                          |                   |
+|  m  Make new call            | +b  Add new buddy        | +a  Add new accnt.|
+|  M  Make multiple calls      | -b  Delete buddy         | -a  Delete accnt. |
+|  a  Answer call              |  i  Send IM              | !a  Modify accnt. |
+|  h  Hangup call  (ha=all)    |  s  Subscribe presence   | rr  (Re-)register |
+|  H  Hold call                |  u  Unsubscribe presence | ru  Unregister    |
+|  v  re-inVite (release hold) |  t  Toggle online status |  >  Cycle next ac.|
+|  U  send UPDATE              |  T  Set online status    |  <  Cycle prev ac.|
+| ],[ Select next/prev call    +--------------------------+-------------------+
+|  x  Xfer call                |      Media Commands:     |  Status & Config: |
+|  X  Xfer with Replaces       |                          |                   |
+|  #  Send RFC 2833 DTMF       | cl  List ports           |  d  Dump status   |
+|  *  Send DTMF with INFO      | cc  Connect port         | dd  Dump detailed |
+| dq  Dump curr. call quality  | cd  Disconnect port      | dc  Dump config   |
+|                              |  V  Adjust audio Volume  |  f  Save config   |
+|  S  Send arbitrary REQUEST   | Cp  Codec priorities     |                   |
++-----------------------------------------------------------------------------+
+|  q  QUIT      L  ReLoad       I  IP change     n  detect NAT type           |
+|  sleep MS     echo [0|1|txt]                                                |
++=============================================================================+
+You have 1 active call
+Current call id=0 to sip:2006@10.42.0.56 [CALLING]
+>>> Cannot switch back to console from file redirection
+18:43:48.027           pjsua_core.c  Shutting down, flags=0...
+18:43:48.027           pjsua_core.c  PJSUA state changed: RUNNING --> CLOSING
+18:43:48.036           pjsua_call.c  .Hangup all calls..
+18:43:48.036           pjsua_call.c  ..Call 0 hanging up: code=0..
+18:43:48.036          pjsua_media.c  ...Call 0: deinitializing media..
+18:43:48.036          pjsua_media.c  ....
+  [CALLING] To: sip:2006@10.42.0.56
+    Call time: 00h:00m:00s, 1st res in 10 ms, conn in 0ms
+18:43:48.036          pjsua_media.c  ....Call 0: cleaning up provisional media, prov_med_cnt=1, med_cnt=0
+18:43:48.036     srtp0x5a0707769700  ....Destroying SRTP transport
+18:43:48.036      udp0x5a070780ea30  ....UDP media transport destroyed
+18:43:48.036     srtp0x5a0707769700  ....SRTP transport destroyed
+18:43:48.036            pjsua_app.c  ...Call 0 is DISCONNECTED [reason=487 (Request Terminated)]
+18:43:48.036      inv0x5a070780d6a8  ....Delaying CANCEL since no provisional response is received yet
+18:43:48.036          pjsua_media.c  .Call 0: deinitializing media..
+18:43:48.036          pjsua_media.c  ..
+  [DISCONNECTED] To: sip:2006@10.42.0.56
+    Call time: 00h:00m:00s, 1st res in 10 ms, conn in 0ms
+18:43:48.036          pjsua_media.c  .Call 1: deinitializing media..
+18:43:48.036          pjsua_media.c  .Call 2: deinitializing media..
+18:43:48.036          pjsua_media.c  .Call 3: deinitializing media..
+18:43:48.036           pjsua_pres.c  .Shutting down presence..
+18:43:48.036            pjsua_acc.c  .Acc 2: setting unregistration..
+18:43:48.036              sip_reg.c  ..Unable to send request, regc has another transaction pending
+18:43:48.036            pjsua_acc.c  ..Unable to create/send REGISTER: Object is busy (PJSIP_EBUSY) [status=171001]
+18:43:48.036           pjsua_core.c  ..RX 553 bytes Response msg 401/REGISTER/cseq=48640 (rdata0x5a07078029b8) from UDP 10.42.0.56:5060:
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 10.42.0.1:7005;rport=7005;received=10.42.0.1;branch=z9hG4bKPjWJmexmoaRhoObQAd7TlZBIe6AhyVnmEJ
+Call-ID: AJLr-kjNKQNGoRJ-huNzxqvMGCafM.GS
+From: <sip:2005@10.42.0.56>;tag=TKMwIY7V2GwqABed5QE6f29rac.M-rXX
+To: <sip:2005@10.42.0.56>;tag=z9hG4bKPjWJmexmoaRhoObQAd7TlZBIe6AhyVnmEJ
+CSeq: 48640 REGISTER
+WWW-Authenticate: Digest realm="asterisk",nonce="1758559428/8d7edbb0ecffc7ca548150d25ddd6b21",opaque="40abbb0a1d3481fa",algorithm=md5,qop="auth"
+Server: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Length:  0
+
+
+--end msg--
+18:43:48.036      sip_auth_client.c  ....Digest algorithm is "md5"
+18:43:48.036           pjsua_core.c  .....TX 816 bytes Request msg REGISTER/cseq=48641 (tdta0x5a0707807818) to UDP 10.42.0.56:5060:
+REGISTER sip:10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7005;rport;branch=z9hG4bKPjGbyMMjPpK2hDh-eEvSsmYWidU40fyk0d
+Max-Forwards: 70
+From: <sip:2005@10.42.0.56>;tag=TKMwIY7V2GwqABed5QE6f29rac.M-rXX
+To: <sip:2005@10.42.0.56>
+Call-ID: AJLr-kjNKQNGoRJ-huNzxqvMGCafM.GS
+CSeq: 48641 REGISTER
+User-Agent: PJSUA v2.14.1 Linux-6.14.0.29/x86_64/glibc-2.39
+Contact: <sip:2005@10.42.0.1:7005;ob>
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Authorization: Digest username="2005", realm="asterisk", nonce="1758559428/8d7edbb0ecffc7ca548150d25ddd6b21", uri="sip:10.42.0.56", response="7b7e6844a2430e207fef8997489f8759", algorithm=md5, cnonce="Iet59hBog.mHO5pvqnardh5Y.nQUEmOt", opaque="40abbb0a1d3481fa", qop=auth, nc=00000001
+Content-Length:  0
+
+
+--end msg--
+18:43:48.036           pjsua_core.c  ..RX 551 bytes Response msg 401/INVITE/cseq=24280 (rdata0x5a07078029b8) from UDP 10.42.0.56:5060:
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 10.42.0.1:7005;rport=7005;received=10.42.0.1;branch=z9hG4bKPj6Sesh7qK0Wo-xPz7v4wGAGzy3GbJ7rxU
+Call-ID: pZJ37vvpMWZvbltl1TGSDE4XjV2.I6s0
+From: <sip:2005@10.42.0.56>;tag=KigGcE31fFFjPPFYB0zybUxSLbz6yhmm
+To: <sip:2006@10.42.0.56>;tag=z9hG4bKPj6Sesh7qK0Wo-xPz7v4wGAGzy3GbJ7rxU
+CSeq: 24280 INVITE
+WWW-Authenticate: Digest realm="asterisk",nonce="1758559428/8d7edbb0ecffc7ca548150d25ddd6b21",opaque="5d19272822394c2d",algorithm=md5,qop="auth"
+Server: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Length:  0
+
+
+--end msg--
+18:43:48.036           pjsua_core.c  ...TX 356 bytes Request msg ACK/cseq=24280 (tdta0x5a070780ece8) to UDP 10.42.0.56:5060:
+ACK sip:2006@10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7005;rport;branch=z9hG4bKPj6Sesh7qK0Wo-xPz7v4wGAGzy3GbJ7rxU
+Max-Forwards: 70
+From: sip:2005@10.42.0.56;tag=KigGcE31fFFjPPFYB0zybUxSLbz6yhmm
+To: sip:2006@10.42.0.56;tag=z9hG4bKPj6Sesh7qK0Wo-xPz7v4wGAGzy3GbJ7rxU
+Call-ID: pZJ37vvpMWZvbltl1TGSDE4XjV2.I6s0
+CSeq: 24280 ACK
+Content-Length:  0
+
+
+--end msg--
+18:43:48.038           pjsua_core.c  ..RX 550 bytes Response msg 200/REGISTER/cseq=48641 (rdata0x5a070781b2a8) from UDP 10.42.0.56:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.42.0.1:7005;rport=7005;received=10.42.0.1;branch=z9hG4bKPjGbyMMjPpK2hDh-eEvSsmYWidU40fyk0d
+Call-ID: AJLr-kjNKQNGoRJ-huNzxqvMGCafM.GS
+From: <sip:2005@10.42.0.56>;tag=TKMwIY7V2GwqABed5QE6f29rac.M-rXX
+To: <sip:2005@10.42.0.56>;tag=z9hG4bKPjGbyMMjPpK2hDh-eEvSsmYWidU40fyk0d
+CSeq: 48641 REGISTER
+Date: Mon, 22 Sep 2025 16:43:48 GMT
+Contact: <sip:2005@10.42.0.1:6005;ob>;expires=268
+Contact: <sip:2005@10.42.0.1:7005;ob>;expires=299
+Expires: 300
+Server: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Length:  0
+
+
+--end msg--
+18:43:48.038            pjsua_acc.c  .....SIP outbound status for acc 2 is not active
+18:43:48.038            pjsua_acc.c  .....sip:2005@10.42.0.56: registration success, status=200 (OK), will re-register in 299 seconds
+18:43:48.038            pjsua_acc.c  .....Keep-alive timer started for acc 2, destination:10.42.0.56:5060, interval:12s
+18:43:48.063           pjsua_core.c  ..RX 639 bytes Request msg NOTIFY/cseq=30339 (rdata0x5a07078029b8) from UDP 10.42.0.56:5060:
+NOTIFY sip:2005@10.42.0.1:7005;ob SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.56:5060;rport;branch=z9hG4bKPjadb8f761-2871-4f40-9990-c632a1a56410
+From: <sip:2005@10.42.0.56>;tag=226f6da6-7c9d-4fdd-b420-8ef9b229e7cc
+To: <sip:2005@10.42.0.1;ob>
+Contact: <sip:2005@10.42.0.56:5060>
+Call-ID: 13a68dc0-4910-400b-b3d3-0ad8bb6bc649
+CSeq: 30339 NOTIFY
+Subscription-State: terminated
+Event: message-summary
+Allow-Events: presence, dialog, message-summary, refer
+Max-Forwards: 70
+User-Agent: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Type: application/simple-message-summary
+Content-Length:    48
+
+Messages-Waiting: no
+Voice-Message: 0/0 (0/0)
+
+--end msg--
+18:43:48.063           pjsua_pres.c  ..Got unsolicited NOTIFY from 10.42.0.56:5060..
+18:43:48.064           pjsua_core.c  ....TX 372 bytes Response msg 200/NOTIFY/cseq=30339 (tdta0x5a070780fcf8) to UDP 10.42.0.56:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.42.0.56:5060;rport=5060;received=10.42.0.56;branch=z9hG4bKPjadb8f761-2871-4f40-9990-c632a1a56410
+Call-ID: 13a68dc0-4910-400b-b3d3-0ad8bb6bc649
+From: <sip:2005@10.42.0.56>;tag=226f6da6-7c9d-4fdd-b420-8ef9b229e7cc
+To: <sip:2005@10.42.0.1;ob>;tag=z9hG4bKPjadb8f761-2871-4f40-9990-c632a1a56410
+CSeq: 30339 NOTIFY
+Content-Length:  0
+
+
+--end msg--
+18:43:48.064            pjsua_app.c  ...Received MWI for acc 2:
+18:43:48.064            pjsua_app.c  ... Content-Type: application/simple-message-summary
+18:43:48.064            pjsua_app.c  ... Body:
+Messages-Waiting: no
+Voice-Message: 0/0 (0/0)
+
+18:43:49.026            pjsua_aud.c  .Closing sound device after idle for 1 second(s)
+18:43:49.027            pjsua_app.c  ..Turning sound device -99 -99 OFF
+18:43:49.027            pjsua_aud.c  ..Closing null sound device..
+18:43:52.538           pjsua_core.c  .Destroying...
+18:43:52.538        sip_transport.c  .Transport udp0x5a070777f630 shutting down, force=0
+18:43:52.538             tcptp:7005  .SIP TCP transport destroyed
+18:43:52.538          pjsua_media.c  .Shutting down media..
+18:43:52.539      sip_transaction.c  .Stopping transaction layer module
+18:43:52.539      sip_transaction.c  .Stopped transaction layer module
+18:43:52.539         sip_endpoint.c  .Module "mod-default-handler" unregistered
+18:43:52.539         sip_endpoint.c  .Module "mod-unsolicited-mwi" unregistered
+18:43:52.539         sip_endpoint.c  .Module "mod-pjsua-options" unregistered
+18:43:52.539         sip_endpoint.c  .Module "mod-pjsua-im" unregistered
+18:43:52.539         sip_endpoint.c  .Module "mod-pjsua-pres" unregistered
+18:43:52.539         sip_endpoint.c  .Module "mod-pjsua" unregistered
+18:43:52.539         sip_endpoint.c  .Module "mod-stateful-util" unregistered
+18:43:52.539         sip_endpoint.c  .Module "mod-refer" unregistered
+18:43:52.539         sip_endpoint.c  .Module "mod-mwi" unregistered
+18:43:52.539         sip_endpoint.c  .Module "mod-presence" unregistered
+18:43:52.539         sip_endpoint.c  .Module "mod-evsub" unregistered
+18:43:52.539         sip_endpoint.c  .Module "mod-invite" unregistered
+18:43:52.539         sip_endpoint.c  .Module "mod-100rel" unregistered
+18:43:52.539         sip_endpoint.c  .Module "mod-ua" unregistered
+18:43:52.539      sip_transaction.c  .Transaction layer module destroyed
+18:43:52.539         sip_endpoint.c  .Module "mod-tsx-layer" unregistered
+18:43:52.539         sip_endpoint.c  .Module "mod-msg-print" unregistered
+18:43:52.539         sip_endpoint.c  .Module "mod-pjsua-log" unregistered
+18:43:52.544                timer.c  .Dumping timer heap:
+18:43:52.544                timer.c  .  Cur size: 2 entries, max: 3070
+18:43:52.544                timer.c  .  Entries: 
+18:43:52.544                timer.c  .    _id	Id	Elapsed	Source
+18:43:52.544                timer.c  .    ----------------------------------
+18:43:52.544                timer.c  .    6	0	7.494	../src/pjsua-lib/pjsua_acc.c:2257
+18:43:52.544                timer.c  .    2	1	289.494	../src/pjsip-ua/sip_reg.c:864
+18:43:52.548         sip_endpoint.c  .Endpoint 0x5a0707756c78 destroyed
+18:43:52.548      udp0x5a070777f630  .Pool is not released by application, releasing now
+18:43:52.548     glck0x5a0707801350  .Pool is not released by application, releasing now
+18:43:52.548      rtd0x5a0707801980  .Pool is not released by application, releasing now
+18:43:52.548     regc0x5a07078061a0  .Pool is not released by application, releasing now
+18:43:52.548 auth_cli0x5a0707769700  .Pool is not released by application, releasing now
+18:43:52.548           pjsua_core.c  .PJSUA state changed: CLOSING --> NULL
+18:43:52.548           pjsua_core.c  .PJSUA destroyed...
+[full_validation] Calling 2008 from 2007 for 30s
+[full_validation] > sudo env ASTERISK_PBX_IP=10.42.0.56 ASTERISK_CONTAINER=asterisk01 ./simulate_softphones.sh call 2007 2008 30
+Dialing 2008 from 2007 (duration 30s)
+18:43:54.610         sip_endpoint.c !.Module "mod-pjsua-log" registered
+18:43:54.610         sip_endpoint.c  .Module "mod-tsx-layer" registered
+18:43:54.610         sip_endpoint.c  .Module "mod-stateful-util" registered
+18:43:54.610         sip_endpoint.c  .Module "mod-ua" registered
+18:43:54.610         sip_endpoint.c  .Module "mod-100rel" registered
+18:43:54.610         sip_endpoint.c  .Module "mod-pjsua" registered
+18:43:54.610         sip_endpoint.c  .Module "mod-invite" registered
+18:43:54.643             alsa_dev.c  ..ALSA driver found 19 devices
+18:43:54.643             alsa_dev.c  ..ALSA initialized
+18:43:54.643                  pjlib  ..select() I/O Queue created (0x60927a9d4728)
+18:43:54.647         sip_endpoint.c  .Module "mod-evsub" registered
+18:43:54.647         sip_endpoint.c  .Module "mod-presence" registered
+18:43:54.647         sip_endpoint.c  .Module "mod-mwi" registered
+18:43:54.647         sip_endpoint.c  .Module "mod-refer" registered
+18:43:54.647         sip_endpoint.c  .Module "mod-pjsua-pres" registered
+18:43:54.647         sip_endpoint.c  .Module "mod-pjsua-im" registered
+18:43:54.647         sip_endpoint.c  .Module "mod-pjsua-options" registered
+18:43:54.647           pjsua_core.c  .1 SIP worker threads created
+18:43:54.647           pjsua_core.c  .pjsua version 2.14.1 for Linux-6.14.0.29/x86_64/glibc-2.39 initialized
+18:43:54.647           pjsua_core.c  .PJSUA state changed: CREATED --> INIT
+18:43:54.647         sip_endpoint.c  Module "mod-default-handler" registered
+18:43:54.647           pjsua_core.c  SIP UDP socket reachable at 10.0.2.15:7007
+18:43:54.648      udp0x60927a987630  SIP UDP transport started, published address is 10.0.2.15:7007
+18:43:54.648            pjsua_acc.c  Adding account: id=<sip:10.0.2.15:7007>
+18:43:54.648            pjsua_acc.c  .Account <sip:10.0.2.15:7007> added with id 0
+18:43:54.648            pjsua_acc.c  Modifying account 0
+18:43:54.648            pjsua_acc.c  Acc 0: setting online status to 1..
+18:43:54.648             tcptp:7007  SIP TCP listener ready for incoming connections at 10.0.2.15:7007
+18:43:54.648            pjsua_acc.c  Adding account: id=<sip:10.0.2.15:7007;transport=TCP>
+18:43:54.648            pjsua_acc.c  .Account <sip:10.0.2.15:7007;transport=TCP> added with id 1
+18:43:54.648            pjsua_acc.c  Modifying account 1
+18:43:54.648            pjsua_acc.c  Acc 1: setting online status to 1..
+18:43:54.648            pjsua_acc.c  Adding account: id=sip:2007@10.42.0.56
+18:43:54.648            pjsua_acc.c  .Account sip:2007@10.42.0.56 added with id 2
+18:43:54.648            pjsua_acc.c  .Acc 2: setting registration..
+18:43:54.648           pjsua_core.c  ...TX 531 bytes Request msg REGISTER/cseq=13533 (tdta0x60927aa0f818) to UDP 10.42.0.56:5060:
+REGISTER sip:10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7007;rport;branch=z9hG4bKPjCrLrgk60SUwHNfn4LbY2gOicYKwf8iQ3
+Max-Forwards: 70
+From: <sip:2007@10.42.0.56>;tag=7-PQbjaUd44iop-SKV7J1EMffLKWOgjJ
+To: <sip:2007@10.42.0.56>
+Call-ID: YH1LAZYqaLHlHaixKWMIRn.2kZ9CaM3I
+CSeq: 13533 REGISTER
+User-Agent: PJSUA v2.14.1 Linux-6.14.0.29/x86_64/glibc-2.39
+Contact: <sip:2007@10.42.0.1:7007;ob>
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Content-Length:  0
+
+
+--end msg--
+18:43:54.648            pjsua_acc.c  ..Acc 2: Registration sent
+18:43:54.648            pjsua_acc.c  Acc 2: setting online status to 1..
+18:43:54.648           pjsua_pres.c  Adding buddy: sip:2008@10.42.0.56
+18:43:54.648           pjsua_pres.c  .Buddy 0 added.
+18:43:54.648           pjsua_pres.c  ..Buddy 0: updating presence..
+18:43:54.648            pjsua_aud.c  Setting null sound device..
+18:43:54.648            pjsua_app.c  .Turning sound device -99 -99 ON
+18:43:54.648            pjsua_aud.c  .Opening null sound device..
+18:43:54.649           pjsua_core.c  PJSUA state changed: INIT --> STARTING
+18:43:54.649         sip_endpoint.c  .Module "mod-unsolicited-mwi" registered
+18:43:54.649           pjsua_core.c  .PJSUA state changed: STARTING --> RUNNING
+18:43:54.649                 main.c  Ready: Success
+18:43:54.649           pjsua_call.c  Making call with acc #2 to sip:2008@10.42.0.56
+18:43:54.649          pjsua_media.c  .Call 0: initializing media..
+18:43:54.649          pjsua_media.c  ..RTP socket reachable at 10.0.2.15:4000
+18:43:54.649          pjsua_media.c  ..RTCP socket reachable at 10.0.2.15:4001
+18:43:54.649     srtp0x60927a971700  ..SRTP transport created
+18:43:54.649          pjsua_media.c  ..Media index 0 selected for audio call 0
+18:43:54.649      udp0x60927aa16a30  ..UDP media transport created
+18:43:54.649           pjsua_core.c  ....TX 1250 bytes Request msg INVITE/cseq=20554 (tdta0x60927aa1f788) to UDP 10.42.0.56:5060:
+INVITE sip:2008@10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7007;rport;branch=z9hG4bKPj0GDIa.E7ITOeni6JSF.tJKjqpfKz0dqj
+Max-Forwards: 70
+From: sip:2007@10.42.0.56;tag=ceO3xssagCzemU7yK5AONYJ.XDBycx21
+To: sip:2008@10.42.0.56
+Contact: <sip:2007@10.42.0.1:7007;ob>
+Call-ID: ik9ZnlJC6txHmxv155UUOeh3ta0.UcBu
+CSeq: 20554 INVITE
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Supported: replaces, 100rel, timer, norefersub
+Session-Expires: 1800
+Min-SE: 90
+User-Agent: PJSUA v2.14.1 Linux-6.14.0.29/x86_64/glibc-2.39
+Content-Type: application/sdp
+Content-Length:   619
+
+v=0
+o=- 3967548234 3967548234 IN IP4 10.0.2.15
+s=pjmedia
+b=AS:84
+t=0 0
+a=X-nat:0
+m=audio 4000 RTP/AVP 96 97 98 99 3 0 8 9 120 121 122
+c=IN IP4 10.0.2.15
+b=TIAS:64000
+a=rtcp:4001 IN IP4 10.0.2.15
+a=sendrecv
+a=rtpmap:96 speex/16000
+a=rtpmap:97 speex/8000
+a=rtpmap:98 speex/32000
+a=rtpmap:99 iLBC/8000
+a=fmtp:99 mode=30
+a=rtpmap:3 GSM/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:9 G722/8000
+a=rtpmap:120 telephone-event/16000
+a=fmtp:120 0-16
+a=rtpmap:121 telephone-event/8000
+a=fmtp:121 0-16
+a=rtpmap:122 telephone-event/32000
+a=fmtp:122 0-16
+a=ssrc:601253153 cname:6ca739997d987c15
+
+--end msg--
+18:43:54.649            pjsua_app.c  .......Call 0 state changed to CALLING
+>>>>
+Account list:
+  [ 0] <sip:10.0.2.15:7007>: does not register
+       Online status: Online
+  [ 1] <sip:10.0.2.15:7007;transport=TCP>: does not register
+       Online status: Online
+ *[ 2] sip:2007@10.42.0.56: 100/In Progress (expires=0)
+       Online status: Online
+Buddy list:
+ [ 1] <?>  sip:2008@10.42.0.56
+
++=============================================================================+
+|       Call Commands:         |   Buddy, IM & Presence:  |     Account:      |
+|                              |                          |                   |
+|  m  Make new call            | +b  Add new buddy        | +a  Add new accnt.|
+|  M  Make multiple calls      | -b  Delete buddy         | -a  Delete accnt. |
+|  a  Answer call              |  i  Send IM              | !a  Modify accnt. |
+|  h  Hangup call  (ha=all)    |  s  Subscribe presence   | rr  (Re-)register |
+|  H  Hold call                |  u  Unsubscribe presence | ru  Unregister    |
+|  v  re-inVite (release hold) |  t  Toggle online status |  >  Cycle next ac.|
+|  U  send UPDATE              |  T  Set online status    |  <  Cycle prev ac.|
+| ],[ Select next/prev call    +--------------------------+-------------------+
+|  x  Xfer call                |      Media Commands:     |  Status & Config: |
+|  X  Xfer with Replaces       |                          |                   |
+|  #  Send RFC 2833 DTMF       | cl  List ports           |  d  Dump status   |
+|  *  Send DTMF with INFO      | cc  Connect port         | dd  Dump detailed |
+| dq  Dump curr. call quality  | cd  Disconnect port      | dc  Dump config   |
+|                              |  V  Adjust audio Volume  |  f  Save config   |
+|  S  Send arbitrary REQUEST   | Cp  Codec priorities     |                   |
++-----------------------------------------------------------------------------+
+|  q  QUIT      L  ReLoad       I  IP change     n  detect NAT type           |
+|  sleep MS     echo [0|1|txt]                                                |
++=============================================================================+
+You have 1 active call
+Current call id=0 to sip:2008@10.42.0.56 [CALLING]
+>>> Cannot switch back to console from file redirection
+18:43:54.649           pjsua_core.c  Shutting down, flags=0...
+18:43:54.649           pjsua_core.c  PJSUA state changed: RUNNING --> CLOSING
+18:43:54.658           pjsua_call.c  .Hangup all calls..
+18:43:54.658           pjsua_call.c  ..Call 0 hanging up: code=0..
+18:43:54.658          pjsua_media.c  ...Call 0: deinitializing media..
+18:43:54.658          pjsua_media.c  ....
+  [CALLING] To: sip:2008@10.42.0.56
+    Call time: 00h:00m:00s, 1st res in 9 ms, conn in 0ms
+18:43:54.658          pjsua_media.c  ....Call 0: cleaning up provisional media, prov_med_cnt=1, med_cnt=0
+18:43:54.658     srtp0x60927a971700  ....Destroying SRTP transport
+18:43:54.658      udp0x60927aa16a30  ....UDP media transport destroyed
+18:43:54.658     srtp0x60927a971700  ....SRTP transport destroyed
+18:43:54.658            pjsua_app.c  ...Call 0 is DISCONNECTED [reason=487 (Request Terminated)]
+18:43:54.658      inv0x60927aa156a8  ....Delaying CANCEL since no provisional response is received yet
+18:43:54.658          pjsua_media.c  .Call 0: deinitializing media..
+18:43:54.658          pjsua_media.c  ..
+  [DISCONNECTED] To: sip:2008@10.42.0.56
+    Call time: 00h:00m:00s, 1st res in 9 ms, conn in 0ms
+18:43:54.658          pjsua_media.c  .Call 1: deinitializing media..
+18:43:54.658          pjsua_media.c  .Call 2: deinitializing media..
+18:43:54.658          pjsua_media.c  .Call 3: deinitializing media..
+18:43:54.658           pjsua_pres.c  .Shutting down presence..
+18:43:54.658            pjsua_acc.c  .Acc 2: setting unregistration..
+18:43:54.658              sip_reg.c  ..Unable to send request, regc has another transaction pending
+18:43:54.658            pjsua_acc.c  ..Unable to create/send REGISTER: Object is busy (PJSIP_EBUSY) [status=171001]
+18:43:54.658           pjsua_core.c  ..RX 553 bytes Response msg 401/REGISTER/cseq=13533 (rdata0x60927aa0a9b8) from UDP 10.42.0.56:5060:
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 10.42.0.1:7007;rport=7007;received=10.42.0.1;branch=z9hG4bKPjCrLrgk60SUwHNfn4LbY2gOicYKwf8iQ3
+Call-ID: YH1LAZYqaLHlHaixKWMIRn.2kZ9CaM3I
+From: <sip:2007@10.42.0.56>;tag=7-PQbjaUd44iop-SKV7J1EMffLKWOgjJ
+To: <sip:2007@10.42.0.56>;tag=z9hG4bKPjCrLrgk60SUwHNfn4LbY2gOicYKwf8iQ3
+CSeq: 13533 REGISTER
+WWW-Authenticate: Digest realm="asterisk",nonce="1758559434/37eb0dbc8034737252fa45da9ec041a0",opaque="4d62d120584eb4bd",algorithm=md5,qop="auth"
+Server: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Length:  0
+
+
+--end msg--
+18:43:54.658      sip_auth_client.c  ....Digest algorithm is "md5"
+18:43:54.658           pjsua_core.c  .....TX 816 bytes Request msg REGISTER/cseq=13534 (tdta0x60927aa0f818) to UDP 10.42.0.56:5060:
+REGISTER sip:10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7007;rport;branch=z9hG4bKPjiWZnNdrrAN.jKZThbM4SzS.IeA-abYFA
+Max-Forwards: 70
+From: <sip:2007@10.42.0.56>;tag=7-PQbjaUd44iop-SKV7J1EMffLKWOgjJ
+To: <sip:2007@10.42.0.56>
+Call-ID: YH1LAZYqaLHlHaixKWMIRn.2kZ9CaM3I
+CSeq: 13534 REGISTER
+User-Agent: PJSUA v2.14.1 Linux-6.14.0.29/x86_64/glibc-2.39
+Contact: <sip:2007@10.42.0.1:7007;ob>
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Authorization: Digest username="2007", realm="asterisk", nonce="1758559434/37eb0dbc8034737252fa45da9ec041a0", uri="sip:10.42.0.56", response="deebd825baeefaf4cf94e47e30cf5e96", algorithm=md5, cnonce="tfECFYUmOKJEFdTccB1JVGlfKlUEPraI", opaque="4d62d120584eb4bd", qop=auth, nc=00000001
+Content-Length:  0
+
+
+--end msg--
+18:43:54.658           pjsua_core.c  ..RX 551 bytes Response msg 401/INVITE/cseq=20554 (rdata0x60927aa0a9b8) from UDP 10.42.0.56:5060:
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 10.42.0.1:7007;rport=7007;received=10.42.0.1;branch=z9hG4bKPj0GDIa.E7ITOeni6JSF.tJKjqpfKz0dqj
+Call-ID: ik9ZnlJC6txHmxv155UUOeh3ta0.UcBu
+From: <sip:2007@10.42.0.56>;tag=ceO3xssagCzemU7yK5AONYJ.XDBycx21
+To: <sip:2008@10.42.0.56>;tag=z9hG4bKPj0GDIa.E7ITOeni6JSF.tJKjqpfKz0dqj
+CSeq: 20554 INVITE
+WWW-Authenticate: Digest realm="asterisk",nonce="1758559434/37eb0dbc8034737252fa45da9ec041a0",opaque="3a8a4c6c3a7eeaea",algorithm=md5,qop="auth"
+Server: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Length:  0
+
+
+--end msg--
+18:43:54.659           pjsua_core.c  ...TX 356 bytes Request msg ACK/cseq=20554 (tdta0x60927aa16ce8) to UDP 10.42.0.56:5060:
+ACK sip:2008@10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7007;rport;branch=z9hG4bKPj0GDIa.E7ITOeni6JSF.tJKjqpfKz0dqj
+Max-Forwards: 70
+From: sip:2007@10.42.0.56;tag=ceO3xssagCzemU7yK5AONYJ.XDBycx21
+To: sip:2008@10.42.0.56;tag=z9hG4bKPj0GDIa.E7ITOeni6JSF.tJKjqpfKz0dqj
+Call-ID: ik9ZnlJC6txHmxv155UUOeh3ta0.UcBu
+CSeq: 20554 ACK
+Content-Length:  0
+
+
+--end msg--
+18:43:54.660           pjsua_core.c  ..RX 550 bytes Response msg 200/REGISTER/cseq=13534 (rdata0x60927aa232a8) from UDP 10.42.0.56:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.42.0.1:7007;rport=7007;received=10.42.0.1;branch=z9hG4bKPjiWZnNdrrAN.jKZThbM4SzS.IeA-abYFA
+Call-ID: YH1LAZYqaLHlHaixKWMIRn.2kZ9CaM3I
+From: <sip:2007@10.42.0.56>;tag=7-PQbjaUd44iop-SKV7J1EMffLKWOgjJ
+To: <sip:2007@10.42.0.56>;tag=z9hG4bKPjiWZnNdrrAN.jKZThbM4SzS.IeA-abYFA
+CSeq: 13534 REGISTER
+Date: Mon, 22 Sep 2025 16:43:54 GMT
+Contact: <sip:2007@10.42.0.1:6007;ob>;expires=264
+Contact: <sip:2007@10.42.0.1:7007;ob>;expires=299
+Expires: 300
+Server: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Length:  0
+
+
+--end msg--
+18:43:54.660            pjsua_acc.c  .....SIP outbound status for acc 2 is not active
+18:43:54.660            pjsua_acc.c  .....sip:2007@10.42.0.56: registration success, status=200 (OK), will re-register in 299 seconds
+18:43:54.660            pjsua_acc.c  .....Keep-alive timer started for acc 2, destination:10.42.0.56:5060, interval:14s
+18:43:54.673           pjsua_core.c  ..RX 637 bytes Request msg NOTIFY/cseq=432 (rdata0x60927aa0a9b8) from UDP 10.42.0.56:5060:
+NOTIFY sip:2007@10.42.0.1:7007;ob SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.56:5060;rport;branch=z9hG4bKPj5beeef64-1386-4a66-b287-ce42c232b38a
+From: <sip:2007@10.42.0.56>;tag=de1ea2a9-9508-4b69-8e4d-fccdf3a65631
+To: <sip:2007@10.42.0.1;ob>
+Contact: <sip:2007@10.42.0.56:5060>
+Call-ID: 78002f0f-c3f7-42a8-b789-543b14bc1aa0
+CSeq: 432 NOTIFY
+Subscription-State: terminated
+Event: message-summary
+Allow-Events: presence, dialog, message-summary, refer
+Max-Forwards: 70
+User-Agent: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Type: application/simple-message-summary
+Content-Length:    48
+
+Messages-Waiting: no
+Voice-Message: 0/0 (0/0)
+
+--end msg--
+18:43:54.673           pjsua_pres.c  ..Got unsolicited NOTIFY from 10.42.0.56:5060..
+18:43:54.673           pjsua_core.c  ....TX 370 bytes Response msg 200/NOTIFY/cseq=432 (tdta0x60927aa17cf8) to UDP 10.42.0.56:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.42.0.56:5060;rport=5060;received=10.42.0.56;branch=z9hG4bKPj5beeef64-1386-4a66-b287-ce42c232b38a
+Call-ID: 78002f0f-c3f7-42a8-b789-543b14bc1aa0
+From: <sip:2007@10.42.0.56>;tag=de1ea2a9-9508-4b69-8e4d-fccdf3a65631
+To: <sip:2007@10.42.0.1;ob>;tag=z9hG4bKPj5beeef64-1386-4a66-b287-ce42c232b38a
+CSeq: 432 NOTIFY
+Content-Length:  0
+
+
+--end msg--
+18:43:54.673            pjsua_app.c  ...Received MWI for acc 2:
+18:43:54.673            pjsua_app.c  ... Content-Type: application/simple-message-summary
+18:43:54.673            pjsua_app.c  ... Body:
+Messages-Waiting: no
+Voice-Message: 0/0 (0/0)
+
+18:43:55.649            pjsua_aud.c  .Closing sound device after idle for 1 second(s)
+18:43:55.649            pjsua_app.c  ..Turning sound device -99 -99 OFF
+18:43:55.649            pjsua_aud.c  ..Closing null sound device..
+18:43:59.172           pjsua_core.c  .Destroying...
+18:43:59.172        sip_transport.c  .Transport udp0x60927a987630 shutting down, force=0
+18:43:59.172             tcptp:7007  .SIP TCP transport destroyed
+18:43:59.172          pjsua_media.c  .Shutting down media..
+18:43:59.182      sip_transaction.c  .Stopping transaction layer module
+18:43:59.182      sip_transaction.c  .Stopped transaction layer module
+18:43:59.182         sip_endpoint.c  .Module "mod-default-handler" unregistered
+18:43:59.182         sip_endpoint.c  .Module "mod-unsolicited-mwi" unregistered
+18:43:59.182         sip_endpoint.c  .Module "mod-pjsua-options" unregistered
+18:43:59.182         sip_endpoint.c  .Module "mod-pjsua-im" unregistered
+18:43:59.182         sip_endpoint.c  .Module "mod-pjsua-pres" unregistered
+18:43:59.182         sip_endpoint.c  .Module "mod-pjsua" unregistered
+18:43:59.182         sip_endpoint.c  .Module "mod-stateful-util" unregistered
+18:43:59.182         sip_endpoint.c  .Module "mod-refer" unregistered
+18:43:59.182         sip_endpoint.c  .Module "mod-mwi" unregistered
+18:43:59.182         sip_endpoint.c  .Module "mod-presence" unregistered
+18:43:59.182         sip_endpoint.c  .Module "mod-evsub" unregistered
+18:43:59.182         sip_endpoint.c  .Module "mod-invite" unregistered
+18:43:59.182         sip_endpoint.c  .Module "mod-100rel" unregistered
+18:43:59.182         sip_endpoint.c  .Module "mod-ua" unregistered
+18:43:59.182      sip_transaction.c  .Transaction layer module destroyed
+18:43:59.182         sip_endpoint.c  .Module "mod-tsx-layer" unregistered
+18:43:59.182         sip_endpoint.c  .Module "mod-msg-print" unregistered
+18:43:59.182         sip_endpoint.c  .Module "mod-pjsua-log" unregistered
+18:43:59.183                timer.c  .Dumping timer heap:
+18:43:59.183                timer.c  .  Cur size: 2 entries, max: 3070
+18:43:59.183                timer.c  .  Entries: 
+18:43:59.183                timer.c  .    _id	Id	Elapsed	Source
+18:43:59.183                timer.c  .    ----------------------------------
+18:43:59.183                timer.c  .    6	0	9.477	../src/pjsua-lib/pjsua_acc.c:2257
+18:43:59.183                timer.c  .    2	1	289.477	../src/pjsip-ua/sip_reg.c:864
+18:43:59.183         sip_endpoint.c  .Endpoint 0x60927a95ec78 destroyed
+18:43:59.183      udp0x60927a987630  .Pool is not released by application, releasing now
+18:43:59.183     glck0x60927aa09350  .Pool is not released by application, releasing now
+18:43:59.183      rtd0x60927aa09980  .Pool is not released by application, releasing now
+18:43:59.183     regc0x60927aa0e1a0  .Pool is not released by application, releasing now
+18:43:59.183 auth_cli0x60927a971700  .Pool is not released by application, releasing now
+18:43:59.183           pjsua_core.c  .PJSUA state changed: CLOSING --> NULL
+18:43:59.183           pjsua_core.c  .PJSUA destroyed...
+[full_validation] Calling 2001 from 2009 for 30s
+[full_validation] > sudo env ASTERISK_PBX_IP=10.42.0.56 ASTERISK_CONTAINER=asterisk01 ./simulate_softphones.sh call 2009 2001 30
+Dialing 2001 from 2009 (duration 30s)
+18:44:01.315         sip_endpoint.c !.Module "mod-pjsua-log" registered
+18:44:01.315         sip_endpoint.c  .Module "mod-tsx-layer" registered
+18:44:01.315         sip_endpoint.c  .Module "mod-stateful-util" registered
+18:44:01.315         sip_endpoint.c  .Module "mod-ua" registered
+18:44:01.315         sip_endpoint.c  .Module "mod-100rel" registered
+18:44:01.315         sip_endpoint.c  .Module "mod-pjsua" registered
+18:44:01.315         sip_endpoint.c  .Module "mod-invite" registered
+18:44:01.367             alsa_dev.c  ..ALSA driver found 19 devices
+18:44:01.367             alsa_dev.c  ..ALSA initialized
+18:44:01.367                  pjlib  ..select() I/O Queue created (0x621b6dbd6728)
+18:44:01.371         sip_endpoint.c  .Module "mod-evsub" registered
+18:44:01.371         sip_endpoint.c  .Module "mod-presence" registered
+18:44:01.371         sip_endpoint.c  .Module "mod-mwi" registered
+18:44:01.371         sip_endpoint.c  .Module "mod-refer" registered
+18:44:01.371         sip_endpoint.c  .Module "mod-pjsua-pres" registered
+18:44:01.371         sip_endpoint.c  .Module "mod-pjsua-im" registered
+18:44:01.371         sip_endpoint.c  .Module "mod-pjsua-options" registered
+18:44:01.371           pjsua_core.c  .1 SIP worker threads created
+18:44:01.371           pjsua_core.c  .pjsua version 2.14.1 for Linux-6.14.0.29/x86_64/glibc-2.39 initialized
+18:44:01.371           pjsua_core.c  .PJSUA state changed: CREATED --> INIT
+18:44:01.371         sip_endpoint.c  Module "mod-default-handler" registered
+18:44:01.372           pjsua_core.c  SIP UDP socket reachable at 10.0.2.15:7009
+18:44:01.372      udp0x621b6db89630  SIP UDP transport started, published address is 10.0.2.15:7009
+18:44:01.372            pjsua_acc.c  Adding account: id=<sip:10.0.2.15:7009>
+18:44:01.372            pjsua_acc.c  .Account <sip:10.0.2.15:7009> added with id 0
+18:44:01.372            pjsua_acc.c  Modifying account 0
+18:44:01.372            pjsua_acc.c  Acc 0: setting online status to 1..
+18:44:01.372             tcptp:7009  SIP TCP listener ready for incoming connections at 10.0.2.15:7009
+18:44:01.372            pjsua_acc.c  Adding account: id=<sip:10.0.2.15:7009;transport=TCP>
+18:44:01.372            pjsua_acc.c  .Account <sip:10.0.2.15:7009;transport=TCP> added with id 1
+18:44:01.372            pjsua_acc.c  Modifying account 1
+18:44:01.372            pjsua_acc.c  Acc 1: setting online status to 1..
+18:44:01.372            pjsua_acc.c  Adding account: id=sip:2009@10.42.0.56
+18:44:01.372            pjsua_acc.c  .Account sip:2009@10.42.0.56 added with id 2
+18:44:01.372            pjsua_acc.c  .Acc 2: setting registration..
+18:44:01.372           pjsua_core.c  ...TX 531 bytes Request msg REGISTER/cseq=27550 (tdta0x621b6dc11818) to UDP 10.42.0.56:5060:
+REGISTER sip:10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7009;rport;branch=z9hG4bKPjJaLjFowq4N8BKt-KP1guK9ICDX2EP6HN
+Max-Forwards: 70
+From: <sip:2009@10.42.0.56>;tag=XQ0OO34zwu6WO9vx4Q9eKuFuaxtvi-4F
+To: <sip:2009@10.42.0.56>
+Call-ID: zH5PK1fAP.uRzjIHGjPEFozepAtaPQIv
+CSeq: 27550 REGISTER
+User-Agent: PJSUA v2.14.1 Linux-6.14.0.29/x86_64/glibc-2.39
+Contact: <sip:2009@10.42.0.1:7009;ob>
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Content-Length:  0
+
+
+--end msg--
+18:44:01.372            pjsua_acc.c  ..Acc 2: Registration sent
+18:44:01.372            pjsua_acc.c  Acc 2: setting online status to 1..
+18:44:01.372           pjsua_pres.c  Adding buddy: sip:2001@10.42.0.56
+18:44:01.372           pjsua_pres.c  .Buddy 0 added.
+18:44:01.372           pjsua_pres.c  ..Buddy 0: updating presence..
+18:44:01.372            pjsua_aud.c  Setting null sound device..
+18:44:01.372            pjsua_app.c  .Turning sound device -99 -99 ON
+18:44:01.372            pjsua_aud.c  .Opening null sound device..
+18:44:01.372           pjsua_core.c  PJSUA state changed: INIT --> STARTING
+18:44:01.372         sip_endpoint.c  .Module "mod-unsolicited-mwi" registered
+18:44:01.372           pjsua_core.c  .PJSUA state changed: STARTING --> RUNNING
+18:44:01.372                 main.c  Ready: Success
+18:44:01.372           pjsua_call.c  Making call with acc #2 to sip:2001@10.42.0.56
+18:44:01.372          pjsua_media.c  .Call 0: initializing media..
+18:44:01.372          pjsua_media.c  ..RTP socket reachable at 10.0.2.15:4000
+18:44:01.372          pjsua_media.c  ..RTCP socket reachable at 10.0.2.15:4001
+18:44:01.372     srtp0x621b6db73700  ..SRTP transport created
+18:44:01.372          pjsua_media.c  ..Media index 0 selected for audio call 0
+18:44:01.372      udp0x621b6dc18a30  ..UDP media transport created
+18:44:01.373           pjsua_core.c  ....TX 1250 bytes Request msg INVITE/cseq=21553 (tdta0x621b6dc21788) to UDP 10.42.0.56:5060:
+INVITE sip:2001@10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7009;rport;branch=z9hG4bKPjCs6rvoWKfCgZ1OVA8v6089msAZb-upev
+Max-Forwards: 70
+From: sip:2009@10.42.0.56;tag=zXTIJt2VVhC97umdxS6AeMtNjhHYzfcH
+To: sip:2001@10.42.0.56
+Contact: <sip:2009@10.42.0.1:7009;ob>
+Call-ID: 5HSRjkqp3BThSl8ElSzXzwRh9hIrjuoO
+CSeq: 21553 INVITE
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Supported: replaces, 100rel, timer, norefersub
+Session-Expires: 1800
+Min-SE: 90
+User-Agent: PJSUA v2.14.1 Linux-6.14.0.29/x86_64/glibc-2.39
+Content-Type: application/sdp
+Content-Length:   619
+
+v=0
+o=- 3967548241 3967548241 IN IP4 10.0.2.15
+s=pjmedia
+b=AS:84
+t=0 0
+a=X-nat:0
+m=audio 4000 RTP/AVP 96 97 98 99 3 0 8 9 120 121 122
+c=IN IP4 10.0.2.15
+b=TIAS:64000
+a=rtcp:4001 IN IP4 10.0.2.15
+a=sendrecv
+a=rtpmap:96 speex/16000
+a=rtpmap:97 speex/8000
+a=rtpmap:98 speex/32000
+a=rtpmap:99 iLBC/8000
+a=fmtp:99 mode=30
+a=rtpmap:3 GSM/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:9 G722/8000
+a=rtpmap:120 telephone-event/16000
+a=fmtp:120 0-16
+a=rtpmap:121 telephone-event/8000
+a=fmtp:121 0-16
+a=rtpmap:122 telephone-event/32000
+a=fmtp:122 0-16
+a=ssrc:294768772 cname:233844d956f96615
+
+--end msg--
+18:44:01.373            pjsua_app.c  .......Call 0 state changed to CALLING
+>>>>
+Account list:
+  [ 0] <sip:10.0.2.15:7009>: does not register
+       Online status: Online
+  [ 1] <sip:10.0.2.15:7009;transport=TCP>: does not register
+       Online status: Online
+ *[ 2] sip:2009@10.42.0.56: 100/In Progress (expires=0)
+       Online status: Online
+Buddy list:
+ [ 1] <?>  sip:2001@10.42.0.56
+
++=============================================================================+
+|       Call Commands:         |   Buddy, IM & Presence:  |     Account:      |
+|                              |                          |                   |
+|  m  Make new call            | +b  Add new buddy        | +a  Add new accnt.|
+|  M  Make multiple calls      | -b  Delete buddy         | -a  Delete accnt. |
+|  a  Answer call              |  i  Send IM              | !a  Modify accnt. |
+|  h  Hangup call  (ha=all)    |  s  Subscribe presence   | rr  (Re-)register |
+|  H  Hold call                |  u  Unsubscribe presence | ru  Unregister    |
+|  v  re-inVite (release hold) |  t  Toggle online status |  >  Cycle next ac.|
+|  U  send UPDATE              |  T  Set online status    |  <  Cycle prev ac.|
+| ],[ Select next/prev call    +--------------------------+-------------------+
+|  x  Xfer call                |      Media Commands:     |  Status & Config: |
+|  X  Xfer with Replaces       |                          |                   |
+|  #  Send RFC 2833 DTMF       | cl  List ports           |  d  Dump status   |
+|  *  Send DTMF with INFO      | cc  Connect port         | dd  Dump detailed |
+| dq  Dump curr. call quality  | cd  Disconnect port      | dc  Dump config   |
+|                              |  V  Adjust audio Volume  |  f  Save config   |
+|  S  Send arbitrary REQUEST   | Cp  Codec priorities     |                   |
++-----------------------------------------------------------------------------+
+|  q  QUIT      L  ReLoad       I  IP change     n  detect NAT type           |
+|  sleep MS     echo [0|1|txt]                                                |
++=============================================================================+
+You have 1 active call
+Current call id=0 to sip:2001@10.42.0.56 [CALLING]
+>>> Cannot switch back to console from file redirection
+18:44:01.373           pjsua_core.c  Shutting down, flags=0...
+18:44:01.373           pjsua_core.c  PJSUA state changed: RUNNING --> CLOSING
+18:44:01.382           pjsua_call.c  .Hangup all calls..
+18:44:01.382           pjsua_call.c  ..Call 0 hanging up: code=0..
+18:44:01.382          pjsua_media.c  ...Call 0: deinitializing media..
+18:44:01.382          pjsua_media.c  ....
+  [CALLING] To: sip:2001@10.42.0.56
+    Call time: 00h:00m:00s, 1st res in 10 ms, conn in 0ms
+18:44:01.382          pjsua_media.c  ....Call 0: cleaning up provisional media, prov_med_cnt=1, med_cnt=0
+18:44:01.382     srtp0x621b6db73700  ....Destroying SRTP transport
+18:44:01.382      udp0x621b6dc18a30  ....UDP media transport destroyed
+18:44:01.382     srtp0x621b6db73700  ....SRTP transport destroyed
+18:44:01.382            pjsua_app.c  ...Call 0 is DISCONNECTED [reason=487 (Request Terminated)]
+18:44:01.382      inv0x621b6dc176a8  ....Delaying CANCEL since no provisional response is received yet
+18:44:01.382          pjsua_media.c  .Call 0: deinitializing media..
+18:44:01.382          pjsua_media.c  ..
+  [DISCONNECTED] To: sip:2001@10.42.0.56
+    Call time: 00h:00m:00s, 1st res in 10 ms, conn in 0ms
+18:44:01.382          pjsua_media.c  .Call 1: deinitializing media..
+18:44:01.382          pjsua_media.c  .Call 2: deinitializing media..
+18:44:01.382          pjsua_media.c  .Call 3: deinitializing media..
+18:44:01.382           pjsua_pres.c  .Shutting down presence..
+18:44:01.382            pjsua_acc.c  .Acc 2: setting unregistration..
+18:44:01.382              sip_reg.c  ..Unable to send request, regc has another transaction pending
+18:44:01.382            pjsua_acc.c  ..Unable to create/send REGISTER: Object is busy (PJSIP_EBUSY) [status=171001]
+18:44:01.382           pjsua_core.c  ..RX 553 bytes Response msg 401/REGISTER/cseq=27550 (rdata0x621b6dc0c9b8) from UDP 10.42.0.56:5060:
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 10.42.0.1:7009;rport=7009;received=10.42.0.1;branch=z9hG4bKPjJaLjFowq4N8BKt-KP1guK9ICDX2EP6HN
+Call-ID: zH5PK1fAP.uRzjIHGjPEFozepAtaPQIv
+From: <sip:2009@10.42.0.56>;tag=XQ0OO34zwu6WO9vx4Q9eKuFuaxtvi-4F
+To: <sip:2009@10.42.0.56>;tag=z9hG4bKPjJaLjFowq4N8BKt-KP1guK9ICDX2EP6HN
+CSeq: 27550 REGISTER
+WWW-Authenticate: Digest realm="asterisk",nonce="1758559441/0ce5f94ec2603f353a7e047f7afe892c",opaque="79ee263667154a2c",algorithm=md5,qop="auth"
+Server: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Length:  0
+
+
+--end msg--
+18:44:01.382      sip_auth_client.c  ....Digest algorithm is "md5"
+18:44:01.382           pjsua_core.c  .....TX 816 bytes Request msg REGISTER/cseq=27551 (tdta0x621b6dc11818) to UDP 10.42.0.56:5060:
+REGISTER sip:10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7009;rport;branch=z9hG4bKPj5gyAmlkwcZ-VN5W5kgAChFim1WJrR5eY
+Max-Forwards: 70
+From: <sip:2009@10.42.0.56>;tag=XQ0OO34zwu6WO9vx4Q9eKuFuaxtvi-4F
+To: <sip:2009@10.42.0.56>
+Call-ID: zH5PK1fAP.uRzjIHGjPEFozepAtaPQIv
+CSeq: 27551 REGISTER
+User-Agent: PJSUA v2.14.1 Linux-6.14.0.29/x86_64/glibc-2.39
+Contact: <sip:2009@10.42.0.1:7009;ob>
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Authorization: Digest username="2009", realm="asterisk", nonce="1758559441/0ce5f94ec2603f353a7e047f7afe892c", uri="sip:10.42.0.56", response="1b96a42550307ac4a8700c81c6112e20", algorithm=md5, cnonce="jIBUZqsxrm19s.Zhi27vPWdmKErkKjwL", opaque="79ee263667154a2c", qop=auth, nc=00000001
+Content-Length:  0
+
+
+--end msg--
+18:44:01.382           pjsua_core.c  ..RX 551 bytes Response msg 401/INVITE/cseq=21553 (rdata0x621b6dc0c9b8) from UDP 10.42.0.56:5060:
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 10.42.0.1:7009;rport=7009;received=10.42.0.1;branch=z9hG4bKPjCs6rvoWKfCgZ1OVA8v6089msAZb-upev
+Call-ID: 5HSRjkqp3BThSl8ElSzXzwRh9hIrjuoO
+From: <sip:2009@10.42.0.56>;tag=zXTIJt2VVhC97umdxS6AeMtNjhHYzfcH
+To: <sip:2001@10.42.0.56>;tag=z9hG4bKPjCs6rvoWKfCgZ1OVA8v6089msAZb-upev
+CSeq: 21553 INVITE
+WWW-Authenticate: Digest realm="asterisk",nonce="1758559441/0ce5f94ec2603f353a7e047f7afe892c",opaque="12eec8d8663d80bc",algorithm=md5,qop="auth"
+Server: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Length:  0
+
+
+--end msg--
+18:44:01.382           pjsua_core.c  ...TX 356 bytes Request msg ACK/cseq=21553 (tdta0x621b6dc18ce8) to UDP 10.42.0.56:5060:
+ACK sip:2001@10.42.0.56 SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.1:7009;rport;branch=z9hG4bKPjCs6rvoWKfCgZ1OVA8v6089msAZb-upev
+Max-Forwards: 70
+From: sip:2009@10.42.0.56;tag=zXTIJt2VVhC97umdxS6AeMtNjhHYzfcH
+To: sip:2001@10.42.0.56;tag=z9hG4bKPjCs6rvoWKfCgZ1OVA8v6089msAZb-upev
+Call-ID: 5HSRjkqp3BThSl8ElSzXzwRh9hIrjuoO
+CSeq: 21553 ACK
+Content-Length:  0
+
+
+--end msg--
+18:44:01.383           pjsua_core.c  ..RX 550 bytes Response msg 200/REGISTER/cseq=27551 (rdata0x621b6dc252a8) from UDP 10.42.0.56:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.42.0.1:7009;rport=7009;received=10.42.0.1;branch=z9hG4bKPj5gyAmlkwcZ-VN5W5kgAChFim1WJrR5eY
+Call-ID: zH5PK1fAP.uRzjIHGjPEFozepAtaPQIv
+From: <sip:2009@10.42.0.56>;tag=XQ0OO34zwu6WO9vx4Q9eKuFuaxtvi-4F
+To: <sip:2009@10.42.0.56>;tag=z9hG4bKPj5gyAmlkwcZ-VN5W5kgAChFim1WJrR5eY
+CSeq: 27551 REGISTER
+Date: Mon, 22 Sep 2025 16:44:01 GMT
+Contact: <sip:2009@10.42.0.1:6009;ob>;expires=259
+Contact: <sip:2009@10.42.0.1:7009;ob>;expires=299
+Expires: 300
+Server: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Length:  0
+
+
+--end msg--
+18:44:01.383            pjsua_acc.c  .....SIP outbound status for acc 2 is not active
+18:44:01.383            pjsua_acc.c  .....sip:2009@10.42.0.56: registration success, status=200 (OK), will re-register in 299 seconds
+18:44:01.383            pjsua_acc.c  .....Keep-alive timer started for acc 2, destination:10.42.0.56:5060, interval:12s
+18:44:01.395           pjsua_core.c  ..RX 639 bytes Request msg NOTIFY/cseq=47655 (rdata0x621b6dc0c9b8) from UDP 10.42.0.56:5060:
+NOTIFY sip:2009@10.42.0.1:7009;ob SIP/2.0
+Via: SIP/2.0/UDP 10.42.0.56:5060;rport;branch=z9hG4bKPj42e0cc32-a92d-4b5b-97fa-07135f3333dd
+From: <sip:2009@10.42.0.56>;tag=6065b4d8-4a94-46d7-95b2-88d16acb7575
+To: <sip:2009@10.42.0.1;ob>
+Contact: <sip:2009@10.42.0.56:5060>
+Call-ID: 8ea09b54-a145-470c-839a-c150d0ac7f8f
+CSeq: 47655 NOTIFY
+Subscription-State: terminated
+Event: message-summary
+Allow-Events: presence, dialog, message-summary, refer
+Max-Forwards: 70
+User-Agent: Asterisk PBX 16.2.1~dfsg-2ubuntu1
+Content-Type: application/simple-message-summary
+Content-Length:    48
+
+Messages-Waiting: no
+Voice-Message: 0/0 (0/0)
+
+--end msg--
+18:44:01.395           pjsua_pres.c  ..Got unsolicited NOTIFY from 10.42.0.56:5060..
+18:44:01.395           pjsua_core.c  ....TX 372 bytes Response msg 200/NOTIFY/cseq=47655 (tdta0x621b6dc19cf8) to UDP 10.42.0.56:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.42.0.56:5060;rport=5060;received=10.42.0.56;branch=z9hG4bKPj42e0cc32-a92d-4b5b-97fa-07135f3333dd
+Call-ID: 8ea09b54-a145-470c-839a-c150d0ac7f8f
+From: <sip:2009@10.42.0.56>;tag=6065b4d8-4a94-46d7-95b2-88d16acb7575
+To: <sip:2009@10.42.0.1;ob>;tag=z9hG4bKPj42e0cc32-a92d-4b5b-97fa-07135f3333dd
+CSeq: 47655 NOTIFY
+Content-Length:  0
+
+
+--end msg--
+18:44:01.395            pjsua_app.c  ...Received MWI for acc 2:
+18:44:01.395            pjsua_app.c  ... Content-Type: application/simple-message-summary
+18:44:01.395            pjsua_app.c  ... Body:
+Messages-Waiting: no
+Voice-Message: 0/0 (0/0)
+
+18:44:02.374            pjsua_aud.c  .Closing sound device after idle for 1 second(s)
+18:44:02.374            pjsua_app.c  ..Turning sound device -99 -99 OFF
+18:44:02.374            pjsua_aud.c  ..Closing null sound device..
+18:44:05.849           pjsua_core.c  .Destroying...
+18:44:05.849        sip_transport.c  .Transport udp0x621b6db89630 shutting down, force=0
+18:44:05.849             tcptp:7009  .SIP TCP transport destroyed
+18:44:05.849          pjsua_media.c  .Shutting down media..
+18:44:05.876      sip_transaction.c  .Stopping transaction layer module
+18:44:05.876      sip_transaction.c  .Stopped transaction layer module
+18:44:05.876         sip_endpoint.c  .Module "mod-default-handler" unregistered
+18:44:05.876         sip_endpoint.c  .Module "mod-unsolicited-mwi" unregistered
+18:44:05.876         sip_endpoint.c  .Module "mod-pjsua-options" unregistered
+18:44:05.877         sip_endpoint.c  .Module "mod-pjsua-im" unregistered
+18:44:05.877         sip_endpoint.c  .Module "mod-pjsua-pres" unregistered
+18:44:05.877         sip_endpoint.c  .Module "mod-pjsua" unregistered
+18:44:05.877         sip_endpoint.c  .Module "mod-stateful-util" unregistered
+18:44:05.877         sip_endpoint.c  .Module "mod-refer" unregistered
+18:44:05.877         sip_endpoint.c  .Module "mod-mwi" unregistered
+18:44:05.877         sip_endpoint.c  .Module "mod-presence" unregistered
+18:44:05.877         sip_endpoint.c  .Module "mod-evsub" unregistered
+18:44:05.877         sip_endpoint.c  .Module "mod-invite" unregistered
+18:44:05.877         sip_endpoint.c  .Module "mod-100rel" unregistered
+18:44:05.877         sip_endpoint.c  .Module "mod-ua" unregistered
+18:44:05.877      sip_transaction.c  .Transaction layer module destroyed
+18:44:05.877         sip_endpoint.c  .Module "mod-tsx-layer" unregistered
+18:44:05.877         sip_endpoint.c  .Module "mod-msg-print" unregistered
+18:44:05.877         sip_endpoint.c  .Module "mod-pjsua-log" unregistered
+18:44:05.878                timer.c  .Dumping timer heap:
+18:44:05.878                timer.c  .  Cur size: 2 entries, max: 3070
+18:44:05.878                timer.c  .  Entries: 
+18:44:05.878                timer.c  .    _id	Id	Elapsed	Source
+18:44:05.878                timer.c  .    ----------------------------------
+18:44:05.878                timer.c  .    6	0	7.506	../src/pjsua-lib/pjsua_acc.c:2257
+18:44:05.878                timer.c  .    2	1	289.506	../src/pjsip-ua/sip_reg.c:864
+18:44:05.878         sip_endpoint.c  .Endpoint 0x621b6db60c78 destroyed
+18:44:05.878      udp0x621b6db89630  .Pool is not released by application, releasing now
+18:44:05.878     glck0x621b6dc0b350  .Pool is not released by application, releasing now
+18:44:05.878      rtd0x621b6dc0b980  .Pool is not released by application, releasing now
+18:44:05.878     regc0x621b6dc101a0  .Pool is not released by application, releasing now
+18:44:05.878 auth_cli0x621b6db73700  .Pool is not released by application, releasing now
+18:44:05.878           pjsua_core.c  .PJSUA state changed: CLOSING --> NULL
+18:44:05.878           pjsua_core.c  .PJSUA destroyed...
+[full_validation] Configuration checklist
+[full_validation] - DHCP container: sip-dhcp (dnsmasq) supplies 10.42.0.50-99
+[full_validation] - Provisioning templates par modèle :
+[full_validation]     • Extension 2001 (Thomson ST2030 / Thomson ST2030) : template=thomson-st2030_2001.cfg, softphone=stopped, registration=ok, call_out=OK, call_in=OK
+[full_validation]     • Extension 2002 (Grandstream Budgetone 100 A / Grandstream Budgetone 100 A) : template=grandstream-b100-1_2002.cfg, softphone=stopped, registration=ok, call_out=n/a, call_in=OK
+[full_validation]     • Extension 2003 (Grandstream Budgetone 100 B / Grandstream Budgetone 100 B) : template=grandstream-b100-2_2003.cfg, softphone=stopped, registration=ok, call_out=OK, call_in=n/a
+[full_validation]     • Extension 2004 (Aastra 53i / Aastra 53i) : template=aastra-53i_2004.cfg, softphone=stopped, registration=ok, call_out=n/a, call_in=OK
+[full_validation]     • Extension 2005 (Aethra Maia XC / Aethra Maia XC) : template=aethra-maia-xc_2005.cfg, softphone=stopped, registration=ok, call_out=OK, call_in=n/a
+[full_validation]     • Extension 2006 (PAP-2T #1 Line 1 / Linksys PAP-2T #1) : template=pap2t-1_2006.cfg, softphone=stopped, registration=ok, call_out=n/a, call_in=OK
+[full_validation]     • Extension 2007 (PAP-2T #1 Line 2 / Linksys PAP-2T #1) : template=pap2t-1_2007.cfg, softphone=stopped, registration=ok, call_out=OK, call_in=n/a
+[full_validation]     • Extension 2008 (PAP-2T #2 Line 1 / Linksys PAP-2T #2) : template=pap2t-2_2008.cfg, softphone=stopped, registration=ok, call_out=n/a, call_in=OK
+[full_validation]     • Extension 2009 (PAP-2T #2 Line 2 / Linksys PAP-2T #2) : template=pap2t-2_2009.cfg, softphone=stopped, registration=ok, call_out=OK, call_in=n/a
+[full_validation] Current softphone status
+[full_validation] > sudo env ASTERISK_PBX_IP=10.42.0.56 ASTERISK_CONTAINER=asterisk01 ./simulate_softphones.sh status
+Ext    State    PID/Log
+2001   stopped  -
+2002   stopped  -
+2003   stopped  -
+2004   stopped  -
+2005   stopped  -
+2006   stopped  -
+2007   stopped  -
+2008   stopped  -
+2009   stopped  -
+[full_validation] Asterisk contacts (pjsip show contacts)
+[full_validation] > sudo lxc exec asterisk01 -- asterisk -rx pjsip show contacts
+
+  Contact:  <Aor/ContactUri..............................> <Hash....> <Status> <RTT(ms)..>
+==========================================================================================
+
+  Contact:  2001/sip:2001@10.42.0.1:5060;ob                783c7baae1 NonQual         nan
+  Contact:  2001/sip:2001@10.42.0.1:5060;ob                783c7baae1 NonQual         nan
+  Contact:  2001/sip:2001@10.42.0.1:6001;ob                e0cf10ba8c NonQual         nan
+  Contact:  2001/sip:2001@10.42.0.1:6001;ob                e0cf10ba8c NonQual         nan
+  Contact:  2001/sip:2001@10.42.0.1:7001;ob                6fe7bdc2c3 NonQual         nan
+  Contact:  2001/sip:2001@10.42.0.1:7001;ob                6fe7bdc2c3 NonQual         nan
+  Contact:  2002/sip:2002@10.42.0.1:6002;ob                64b4ed0ecc NonQual         nan
+  Contact:  2002/sip:2002@10.42.0.1:6002;ob                64b4ed0ecc NonQual         nan
+  Contact:  2003/sip:2003@10.42.0.1:6003;ob                2457ed7a57 NonQual         nan
+  Contact:  2003/sip:2003@10.42.0.1:6003;ob                2457ed7a57 NonQual         nan
+  Contact:  2003/sip:2003@10.42.0.1:7003;ob                4f008905d7 NonQual         nan
+  Contact:  2003/sip:2003@10.42.0.1:7003;ob                4f008905d7 NonQual         nan
+  Contact:  2004/sip:2004@10.42.0.1:6004;ob                a1d7ef5fc4 NonQual         nan
+  Contact:  2004/sip:2004@10.42.0.1:6004;ob                a1d7ef5fc4 NonQual         nan
+  Contact:  2005/sip:2005@10.42.0.1:6005;ob                9979580d28 NonQual         nan
+  Contact:  2005/sip:2005@10.42.0.1:6005;ob                9979580d28 NonQual         nan
+  Contact:  2005/sip:2005@10.42.0.1:7005;ob                0911aa42e0 NonQual         nan
+  Contact:  2005/sip:2005@10.42.0.1:7005;ob                0911aa42e0 NonQual         nan
+  Contact:  2006/sip:2006@10.42.0.1:6006;ob                3a439d7dfb NonQual         nan
+  Contact:  2006/sip:2006@10.42.0.1:6006;ob                3a439d7dfb NonQual         nan
+  Contact:  2007/sip:2007@10.42.0.1:6007;ob                d335f22b8b NonQual         nan
+  Contact:  2007/sip:2007@10.42.0.1:6007;ob                d335f22b8b NonQual         nan
+  Contact:  2007/sip:2007@10.42.0.1:7007;ob                074d620700 NonQual         nan
+  Contact:  2007/sip:2007@10.42.0.1:7007;ob                074d620700 NonQual         nan
+  Contact:  2008/sip:2008@10.42.0.1:6008;ob                1430db65d5 NonQual         nan
+  Contact:  2008/sip:2008@10.42.0.1:6008;ob                1430db65d5 NonQual         nan
+  Contact:  2009/sip:2009@10.42.0.1:6009;ob                dd9d7095d5 NonQual         nan
+  Contact:  2009/sip:2009@10.42.0.1:6009;ob                dd9d7095d5 NonQual         nan
+  Contact:  2009/sip:2009@10.42.0.1:7009;ob                604d4fb1e0 NonQual         nan
+  Contact:  2009/sip:2009@10.42.0.1:7009;ob                604d4fb1e0 NonQual         nan
+
+Objects found: 30
+
+[full_validation] Running post_setup_checks.sh for detailed summary
+[full_validation] > sudo ./post_setup_checks.sh
+Post-setup validation run: lun. 22 sept. 2025 18:44:10 CEST
+
+== Network Interfaces ==
+lo               UNKNOWN        00:00:00:00:00:00 <LOOPBACK,UP,LOWER_UP> 
+enp0s3           UP             08:00:27:e5:a2:d9 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+enp0s8           UP             08:00:27:29:f9:cf <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP> 
+lxdbr0           UP             00:16:3e:a2:2d:b6 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+veth0d581185@if5 UP             96:12:35:58:c9:d7 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+vethf8bf4d1b@if7 UP             f2:98:e7:26:04:cc <BROADCAST,MULTICAST,UP,LOWER_UP> 
+veth60062aa4@if9 UP             d2:e9:5e:23:0c:1b <BROADCAST,MULTICAST,UP,LOWER_UP> 
+veth8d5baa11@if11 UP             2e:98:68:28:90:b4 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+
+== Bridge Membership ==
+3: enp0s8: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP> mtu 1500 master lxdbr0 state forwarding priority 32 cost 5 
+6: veth0d581185@if5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master lxdbr0 state forwarding priority 32 cost 2 
+8: vethf8bf4d1b@if7: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master lxdbr0 state forwarding priority 32 cost 2 
+10: veth60062aa4@if9: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master lxdbr0 state forwarding priority 32 cost 2 
+12: veth8d5baa11@if11: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master lxdbr0 state forwarding priority 32 cost 2 
+
+== lxdbr0 Addresses ==
+4: lxdbr0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 00:16:3e:a2:2d:b6 brd ff:ff:ff:ff:ff:ff
+    inet 10.42.0.1/24 scope global lxdbr0
+       valid_lft forever preferred_lft forever
+
+== dnsmasq leases (sip-dhcp) ==
+1758601275 0e:7b:8a:49:f6:6b 10.42.0.55 * 01:0e:7b:8a:49:f6:6b
+1758587855 a6:5e:c2:d7:94:0a 10.42.0.51 * 01:a6:5e:c2:d7:94:0a
+1758600027 98:e8:fa:bb:4e:a9 10.42.0.66 * *
+1758588206 00:16:3e:21:fa:e9 10.42.0.62 ua01 ff:d7:5a:54:5e:00:02:00:00:ab:11:19:bd:50:e4:ba:45:dc:70
+1758588208 00:16:3e:42:61:6d 10.42.0.56 asterisk01 ff:a2:ec:58:a8:00:02:00:00:ab:11:8f:14:df:f1:6a:3a:cd:73
+1758588208 00:16:3e:97:14:8b 10.42.0.88 ua02 ff:db:45:94:59:00:02:00:00:ab:11:19:bd:50:e4:ba:45:dc:70
+
+== dnsmasq scope ==
+interface=eth0
+bind-interfaces
+bogus-priv
+quiet-dhcp
+quiet-dhcp6
+quiet-ra
+domain=sip.lab
+dhcp-range=10.42.0.50,10.42.0.99,255.255.255.0,12h
+dhcp-option=option:router,10.42.0.1
+dhcp-option=option:dns-server,10.42.0.2
+dhcp-option=option:domain-search,sip.lab
+server=1.1.1.1
+# dhcp-host=<MAC-thomson-st2030>,10.42.0.50  # Thomson ST2030
+# dhcp-host=<MAC-grandstream-b100-1>,10.42.0.51  # Grandstream Budgetone 100 A
+# dhcp-host=<MAC-grandstream-b100-2>,10.42.0.52  # Grandstream Budgetone 100 B
+# dhcp-host=<MAC-aastra-53i>,10.42.0.53  # Aastra 53i
+# dhcp-host=<MAC-aethra-maia-xc>,10.42.0.54  # Aethra Maia XC
+# dhcp-host=<MAC-pap2t-1>,10.42.0.55  # Linksys PAP-2T #1
+# dhcp-host=<MAC-pap2t-2>,10.42.0.56  # Linksys PAP-2T #2
+
+== Asterisk Peers ==
+Name/username             Host                                    Dyn Forcerport Comedia    ACL Port     Status      Description                      
+2001/2001                 (Unspecified)                            D  Yes        Yes            0        UNKNOWN                                      
+2002/2002                 (Unspecified)                            D  Yes        Yes            0        UNKNOWN                                      
+2003/2003                 (Unspecified)                            D  Yes        Yes            0        UNKNOWN                                      
+2004/2004                 (Unspecified)                            D  Yes        Yes            0        UNKNOWN                                      
+2005/2005                 (Unspecified)                            D  Yes        Yes            0        UNKNOWN                                      
+2006/2006                 (Unspecified)                            D  Yes        Yes            0        UNKNOWN                                      
+2007/2007                 (Unspecified)                            D  Yes        Yes            0        UNKNOWN                                      
+2008/2008                 (Unspecified)                            D  Yes        Yes            0        UNKNOWN                                      
+2009/2009                 (Unspecified)                            D  Yes        Yes            0        UNKNOWN                                      
+ua01                      (Unspecified)                            D  Auto (No)  No             0        UNKNOWN                                      
+10 sip peers [Monitored: 0 online, 10 offline Unmonitored: 0 online, 0 offline]
+
+== Asterisk Channels (snapshot) ==
+Channel              Context              Extension        Prio State   Application  Data                      CallerID        Duration Accountcode PeerAccount BridgeID            
+0 active channels
+0 active calls
+2 calls processed
+
+== Sample pjsua commands ==
+pjsua --id sip:2001@sip.lab --registrar sip:10.42.0.3 --realm '*'       --username 2001 --password 'm6IqgzJJBrfHVdvwKnfK' sip:2002@sip.lab
+
+pjsua --id sip:2002@sip.lab --registrar sip:10.42.0.3 --realm '*'       --username 2002 --password 'rCJ800xpFBe9N9uGyEai' sip:2001@sip.lab
+
+# These sample invocations register each UA against the Asterisk PBX (10.42.0.3)
+# from a remote host, then immediately place a call toward another extension.
+# Running them validates the exercise requirements: the distant UA authenticates,
+# signalling traverses the lxdbr0 bridge (with the USB NIC enslaved), and media
+# flows end-to-end between two SIP endpoints provisioned via the generated
+# accounts.
+
+== Provisioning Templates ==
+aastra-53i_2004.cfg
+aethra-maia-xc_2005.cfg
+grandstream-b100-1_2002.cfg
+grandstream-b100-2_2003.cfg
+pap2t-1_2006.cfg
+pap2t-1_2007.cfg
+pap2t-2_2008.cfg
+pap2t-2_2009.cfg
+thomson-st2030_2001.cfg
+
+[post_setup_checks.sh] Summary written to ./post_setup_summary.txt
+[post_setup_checks.sh] Review the output and complete the phone configuration steps described in README.md
+[full_validation] Full validation sequence complete
+[full_validation] Report saved to ./bilan.txt
+[full_validation] Detailed softphone log: ./.pjsua_sessions/simulate_softphones.log (fallback: /tmp/simulate_softphones.log)
+[full_validation] \nRésumé des validations :
+[full_validation] 1. Comptes SIP auto-générés via setup_toip_infrastructure.sh (voir sip_devices.csv)
+[full_validation] 2. Provisioning par modèle (fichiers ./provisioning/*_<extension>.cfg) et serveur HTTP assist_phone_setup.sh
+[full_validation] 3. DHCP dnsmasq dans le conteneur sip-dhcp, scope 10.42.0.50-0.99
+[full_validation] 4. Enregistrement & appels simulés via simulate_softphones.sh (statuts et résultats ci-dessus)
+[full_validation] 5. Vérifications Asterisk (pjsip show contacts) et post_setup_checks.sh
